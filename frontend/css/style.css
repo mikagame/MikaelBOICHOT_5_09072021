@@ -2,4 +2,8 @@ body {
   margin: 0;
 }
 
+header {
+  display: flex;
+}
+
 /*# sourceMappingURL=style.css.map */
