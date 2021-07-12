@@ -1,18 +1,18 @@
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+header  {
     background-color: rgb(243, 234, 241);
     border-radius: 15px;
     margin: 20px 30px 20px 30px;
+    padding-bottom: 30px;
     img {
         margin-left: 20px;
     }
-    }
-
-
+}
+    
 nav {
     margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     a {
         padding: 10px 20px 10px 20px;
         text-decoration: none;
@@ -29,6 +29,11 @@ nav {
     }
 }
 
+.search {
+    display: flex;
+    justify-content: center;
+    
+}
 
 @media only screen and (max-width : 767px) {
     header {

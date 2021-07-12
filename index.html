@@ -14,28 +14,35 @@
 <body>
 
     <header>
-        <img src="./frontend/img/logo-orinoco.png" alt="logo orinoco"/>
-        <form>
-            <label for=""> 
-                <div class="categories">catégories</div>
-            </label>
-            <label for="search">
-                <input type="search" name="search"/>
-            </label>
-            <label for="submit">
-                <div class="btn_search"><i class="fas fa-search"></i></div>
-            </label>
-        </form>
+        
         <nav>
-            <a href="">Bonjour, identifiez-vous</a>
-            <a href="">Contact</a>
+            <img src="./frontend/img/logo-orinoco.png" alt="logo orinoco"/>
+            <a href="#">Bonjour, identifiez-vous</a>
+            <a href="#">Meilleures ventes</a>
+            <a href="mailto:Orinoco@contact.com">Contact</a>
             <a class="cart" href="cart.html"><i class="fas fa-shopping-cart"></i>Panier</a>
         </nav>
+    
+        <div class="search">
+            <form>
+                <label for=""> 
+                    <div class="categories">catégories</div>
+                </label>
+                <label for="search">
+                    <input type="search" name="search"/>
+                </label>
+                <label for="submit">
+                    <div class="btn_search"><i class="fas fa-search"></i></div>
+                </label>
+            </form>
+
+        </div>
 
     </header>
     <section class="contain">
         <h1>Site de vente en ligne d'ours en peluche faits main</h1>
         <div id="products">
+       
         <a href="">
             <article>
             <div class="group">
@@ -62,10 +69,10 @@
         <a href="">
             <article>
             <div class="group">
-                <img src="backend/images/teddy_1.jpg" alt=""/>  
+                <img src="backend/images/teddy_2.jpg" alt=""/>  
                 <div class="txt">
-                    <div class="name">Norbert</div>
-                    <div class="prix">29€00</div>
+                    <div class="name">Arnold</div>
+                    <div class="prix">39€00</div>
                 </div>
             </div>
             <div class="famous">
@@ -85,10 +92,10 @@
         <a href="">
             <article>
             <div class="group">
-                <img src="backend/images/teddy_1.jpg" alt=""/>  
+                <img src="backend/images/teddy_3.jpg" alt=""/>  
                 <div class="txt">
-                    <div class="name">Norbert</div>
-                    <div class="prix">29€00</div>
+                    <div class="name">Lenny and Carl</div>
+                    <div class="prix">59€00</div>
                 </div>
             </div>
             <div class="famous">
@@ -108,10 +115,10 @@
         <a href="">
             <article>
             <div class="group">
-                <img src="backend/images/teddy_1.jpg" alt=""/>  
+                <img src="backend/images/teddy_4.jpg" alt=""/>  
                 <div class="txt">
-                    <div class="name">Norbert</div>
-                    <div class="prix">29€00</div>
+                    <div class="name">Gustav</div>
+                    <div class="prix">45€00</div>
                 </div>
             </div>
             <div class="famous">
@@ -131,10 +138,10 @@
         <a href="">
             <article>
             <div class="group">
-                <img src="backend/images/teddy_1.jpg" alt=""/>  
+                <img src="backend/images/teddy_5.jpg" alt=""/>  
                 <div class="txt">
-                    <div class="name">Norbert</div>
-                    <div class="prix">29€00</div>
+                    <div class="name">Garfunkel</div>
+                    <div class="prix">55€00</div>
                 </div>
             </div>
             <div class="famous">
@@ -156,13 +163,35 @@
     </section>
 
     <footer>
-        <a href="">A propos</a>
-        <a href="">Moyens de paiement</a>
+        <div class="row-foot">
+        <div class="about">
+            <p >A propos</p>
+            <ul>
+                <a href=""><li>Orinoco</li></a>
+                <a href=""><li>Oribook</li></a>
+                <a href=""><li>Oritextil</li></a>
+            </ul>
+        </div>
+        <div class="pay">
+            <p>Moyens de paiement</p>
+            <ul>
+                <a href=""><li>Cartes de paiement</li></a>
+                <a href=""><li>Paiement en plusieurs fois</li></a>
+                <a href=""><li>Chèques-cadeaux</li></a>
+            </ul>
+
+
+        </div>
         <div class="res-sociaux">
             <a aria-label="facebook" href="facebook.com"><i class="fab fa-facebook"></i></a>
             <a aria-label="twitter" href="twitter.com"><i class="fab fa-twitter"></i></a>
             <a aria-label="instagram" href="instagram.com"><i class="fab fa-instagram-square"></i></a>
         </div>
+    </div>
+    <div class="nav-foot">
+        <a href="">Conditions générales</a>
+        <a href="">Copyright 2021, Orinoco</a>
+    </div>
 
     </footer>
 </body>
