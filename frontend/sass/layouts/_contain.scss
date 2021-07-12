@@ -1,14 +1,14 @@
 .contain {
-    background-color: rgb(243, 234, 241);
-    margin: 20px 30px 20px 30px;
-    border-radius: 15px;
+    
 
     a {
         text-decoration: none;
         color: black;
         transition: all 0.4s;
+        
+       
         &:hover {
-            box-shadow: 5px 5px 5px rgba(142, 88, 254, 0.4);
+            box-shadow: 5px 5px 5px rgba(216, 130, 41, 0.5);
             border-radius: 15px;
            
         }

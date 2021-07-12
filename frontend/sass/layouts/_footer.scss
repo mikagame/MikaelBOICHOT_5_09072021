@@ -1,8 +1,8 @@
 footer {
     
     background-color: rgb(243, 234, 241);
-    border-radius: 15px;
-    margin: 20px 30px 20px 30px;
+  
+    margin: 20px 0px 0px 0px;
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
@@ -47,8 +47,12 @@ footer {
 .nav-foot {
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+    p {
+        font-weight: normal;
+        margin: 0;
+    }
 }
 
 @media only screen and (max-width : 767px) {
