@@ -1,0 +1,35 @@
+#cart {
+    background-color: rgb(243, 234, 241);
+    margin: 20px 30px 20px 30px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.cart {
+    display: flex;
+        align-items: center;
+}
+
+.product_list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.finish {
+    text-align: center;
+
+    a {
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        font-weight: bolder;
+        color: black;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        transition: all 0.4s;
+        &:hover {
+            border: 2px solid rgb(149, 93, 238);;
+            
+        }
+    } 
+
+}

@@ -19,13 +19,25 @@ nav {
         color: black;     
         border: 2px solid transparent;
         border-radius: 10px;
+        transition: all 0.4s;
         &:hover {
             /*color:rgb(149, 93, 238);*/
             border: 2px solid rgb(149, 93, 238);
+            i {
+                color:rgb(149, 93, 238);
+            }
         }
     }
     i {
         margin-right: 10px;
+        transition: all 0.4s;
+    }
+    .fa-arrow-circle-left {
+        font-size: 25px;
+        color: transparent;
+        transition: all 0.4s;
+        display: flex;
+        align-items: center;
     }
 }
 

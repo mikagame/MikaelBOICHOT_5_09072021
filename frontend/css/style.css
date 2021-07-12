@@ -25,13 +25,25 @@ nav a {
   color: black;
   border: 2px solid transparent;
   border-radius: 10px;
+  transition: all 0.4s;
 }
 nav a:hover {
   /*color:rgb(149, 93, 238);*/
   border: 2px solid #955dee;
 }
+nav a:hover i {
+  color: #955dee;
+}
 nav i {
   margin-right: 10px;
+  transition: all 0.4s;
+}
+nav .fa-arrow-circle-left {
+  font-size: 25px;
+  color: transparent;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
 }
 
 .search {
@@ -131,10 +143,43 @@ footer p {
   }
 }
 h1 {
-  padding-top: 20px;
   text-align: center;
   color: #301b58;
-  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+#cart {
+  background-color: #f3eaf1;
+  margin: 20px 30px 20px 30px;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+}
+
+.product_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.finish {
+  text-align: center;
+}
+.finish a {
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font-weight: bolder;
+  color: black;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+.finish a:hover {
+  border: 2px solid #955dee;
 }
 
 input {
