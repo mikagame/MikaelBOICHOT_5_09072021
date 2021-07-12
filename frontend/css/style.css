@@ -90,9 +90,17 @@ form {
 }
 
 article {
-  height: 200px;
   border: 1px solid #8e58fe;
   border-radius: 10px;
+}
+article img {
+  width: 80%;
+  object-fit: cover;
+}
+
+.group {
+  display: flex;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=style.css.map */

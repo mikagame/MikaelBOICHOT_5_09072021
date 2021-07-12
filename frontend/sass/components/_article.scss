@@ -1,6 +1,17 @@
 article {
-    
-    height: 200px;
     border: 1px solid rgb(142, 88, 254);
     border-radius: 10px;
+    
+
+    img {
+        
+        width: 80%;
+        object-fit: cover;
+        
+    }
+}
+
+.group {
+    display: flex;
+    justify-content: space-around;
 }
