@@ -47,6 +47,11 @@ nav i {
 .contain a {
   text-decoration: none;
   color: black;
+  transition: all 0.4s;
+}
+.contain a:hover {
+  box-shadow: 5px 5px 5px rgba(142, 88, 254, 0.4);
+  border-radius: 15px;
 }
 
 #products {
@@ -101,7 +106,7 @@ h1 {
 
 input {
   padding: 6px;
-  width: 300px;
+  /*width: 300px;*/
 }
 
 form {
@@ -126,11 +131,6 @@ form {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 767px) {
-  input {
-    width: 80%;
-  }
-}
 article {
   border: 1px solid #8e58fe;
   border-radius: 10px;
@@ -139,11 +139,26 @@ article {
 article img {
   width: 80%;
   object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
 }
 
-.group {
+/*.group {
+    display: flex;
+    justify-content: space-between;
+}*/
+.name {
+  margin-bottom: 10px;
+}
+
+.famous {
   display: flex;
-  justify-content: space-around;
+  margin: 10px 0 10px 0;
+}
+
+.avis {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

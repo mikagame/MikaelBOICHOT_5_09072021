@@ -5,11 +5,30 @@ article {
 
     img {      
         width: 80%;
-        object-fit: cover;      
+        object-fit: cover;    
+        border-radius: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+          
     }  
 }
 
-.group {
+/*.group {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}*/
+
+.name {
+    margin-bottom: 10px;
 }
+.famous {
+    display: flex;
+    
+    margin: 10px 0 10px 0;
+}
+
+.avis {
+    margin-right: 10px;
+}
+
+

@@ -1,6 +1,6 @@
 input {
     padding: 6px;
-    width: 300px;
+    /*width: 300px;*/
   
 }
 
@@ -28,7 +28,5 @@ form {
 }
 
 @media only screen and (max-width : 767px) {
-    input {
-        width: 80%;
-    }
+   
 }
