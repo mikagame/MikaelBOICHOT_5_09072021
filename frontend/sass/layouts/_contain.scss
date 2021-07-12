@@ -1,0 +1,14 @@
+.contain {
+    background-color: rgb(243, 234, 241);
+    margin: 20px 80px 20px 80px;
+   
+    border-radius: 15px;
+}
+
+#products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    gap: 15px;
+}
+
