@@ -26,3 +26,9 @@ form {
     
     cursor: pointer;
 }
+
+@media only screen and (max-width : 767px) {
+    input {
+        width: 80%;
+    }
+}
