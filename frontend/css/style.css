@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #8e58fe;
+  background-color: rgba(142, 88, 254, 0.4);
 }
 
 header {
@@ -35,15 +35,19 @@ nav i {
 
 .contain {
   background-color: #f3eaf1;
-  margin: 20px 80px 20px 80px;
+  margin: 20px 30px 20px 30px;
   border-radius: 15px;
+}
+.contain a {
+  text-decoration: none;
+  color: black;
 }
 
 #products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 15px;
-  gap: 15px;
+  padding: 20px;
+  gap: 20px;
 }
 
 footer {
@@ -55,11 +59,26 @@ footer {
   margin: 20px 30px 20px 30px;
   height: 90px;
 }
+footer a {
+  text-decoration: none;
+  color: black;
+}
+footer a:hover {
+  color: #6c1bee;
+}
+footer i {
+  font-size: 25px;
+}
+
+.res-sociaux a {
+  padding: 10px;
+}
 
 h1 {
   padding-top: 20px;
   text-align: center;
   color: #301b58;
+  margin: 0;
 }
 
 input {
@@ -92,6 +111,7 @@ form {
 article {
   border: 1px solid #8e58fe;
   border-radius: 10px;
+  padding: 10px;
 }
 article img {
   width: 80%;
