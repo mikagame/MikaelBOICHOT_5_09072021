@@ -13,18 +13,18 @@ nav {
     align-items: center;
     justify-content: space-between;
     a {
-        padding: 10px 20px 10px 20px;
+        padding: 10px;
         text-decoration: none;
         color: black;     
         border: 2px solid transparent;
         border-radius: 10px;
         transition: all 0.4s;
         font-size: 16px;
+        font-weight: 600;
         &:hover {
-            /*color:rgb(149, 93, 238);*/
-            border: 2px solid rgb(149, 93, 238);
+            color: rgb(48, 27, 88);
             i {
-                color:rgb(149, 93, 238);
+                color:rgb(48, 27, 88);
             }
         }
     }
@@ -41,6 +41,10 @@ nav {
     .fa-bars {
         display: none;
     }
+}
+
+.link {
+    display: flex;
 }
 
 .search {
