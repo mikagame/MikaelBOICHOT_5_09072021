@@ -1,6 +1,7 @@
+var url = "http://localhost:3000/api/teddies";
 
 
-fetch("http://localhost:3000/api/teddies")
+fetch(url)
 .then(response => response.json())
 .then(data => {
     data.forEach(element => {
@@ -13,7 +14,7 @@ fetch("http://localhost:3000/api/teddies")
         const p = document.createElement("p");
         const id = element._id;
 
-        a.setAttribute("href", "product.html");
+        a.setAttribute("href", "./frontend/product.html");
         div.setAttribute("id", element._id);
         img.src = element.imageUrl;
         const price = element.price /100;
@@ -25,7 +26,14 @@ fetch("http://localhost:3000/api/teddies")
         div.appendChild(h2);
         div.appendChild(h3);
         div.appendChild(p);
+
         console.log(id);
+        console.log(url+"/"+id);
+
         
+
     });
+})
+.catch(function(error) {
+    //erreur
 })
