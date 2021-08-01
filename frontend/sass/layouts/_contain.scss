@@ -1,20 +1,4 @@
-.contain {
-    
 
-    a {
-        text-decoration: none;
-        color: black;
-        transition: all 0.4s;
-        
-       
-        &:hover {
-            box-shadow: 5px 5px 5px rgba(216, 130, 41, 0.5);
-            border-radius: 15px;
-           
-        }
-    }
-    
-}
 
 #products {
     display: grid;
@@ -23,10 +7,5 @@
     gap: 20px;
 }
 
-@media only screen and (max-width : 767px) {
-     #products {
-        display: flex;
-        flex-direction: column;
-    }
-}
+
 
