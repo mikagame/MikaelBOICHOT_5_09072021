@@ -21,14 +21,14 @@ fetch(url + "/" + id)
 .then(response => response.json())
 .then(data => {
     
-    const div = document.createElement("div");
+    const text = document.createElement("div");
     const img = document.createElement("img");
     const h2 = document.createElement("h2");
     const h3 = document.createElement("h3");
     const p = document.createElement("p");
     const choix = document.createElement("div");
     const ul = document.createElement("ul");
-    const add = document.createElement("p");
+    const add = document.createElement("a");
 
     
     
@@ -42,14 +42,15 @@ fetch(url + "/" + id)
         ul.innerHTML = "Choix de la couleur : ";
         ul.setAttribute("class", "color");
         choix.setAttribute("class", "choix");
+        text.setAttribute("class", "text");
+        add.setAttribute("href", "./cart.html");
         
         only.appendChild(img);
-        only.appendChild(h2);
-        only.appendChild(h3);
-        only.appendChild(p);
+        only.appendChild(text).appendChild(h2);
+        only.appendChild(text).appendChild(h3);
+        only.appendChild(text).appendChild(p);
         
-        
-        //only.appendChild(color).appendChild(li);
+
         data.colors.forEach(element => {
             const a = document.createElement("a");
             const li = document.createElement("li");
@@ -57,6 +58,12 @@ fetch(url + "/" + id)
             a.setAttribute("href", "#");
             only.appendChild(choix).appendChild(ul).appendChild(li).appendChild(a);
         });
+
+        only.appendChild(text).appendChild(add);
         
-        only.appendChild(add);
+        
+        
+        
+        
+        
 })
