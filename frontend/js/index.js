@@ -1,4 +1,4 @@
-var url = "http://localhost:3000/api/teddies";
+const url = "http://localhost:3000/api/teddies";
 
 
 fetch(url)
@@ -12,9 +12,9 @@ fetch(url)
         const h2 = document.createElement("h2");
         const h3 = document.createElement("h3");
         const p = document.createElement("p");
-        const id = element._id;
+        
 
-        a.setAttribute("href", "./frontend/product.html");
+        a.setAttribute("href", `./frontend/product.html?id=${element._id}`);
         div.setAttribute("id", element._id);
         img.src = element.imageUrl;
         const price = element.price /100;
@@ -27,10 +27,6 @@ fetch(url)
         div.appendChild(h3);
         div.appendChild(p);
 
-        console.log(id);
-        console.log(url+"/"+id);
-
-        
 
     });
 })
