@@ -221,7 +221,7 @@ label {
   transition: all 0.3s;
 }
 #ours a:hover {
-  background-color: rgba(145, 92, 251, 0.5);
+  color: #915cfb;
 }
 
 #only {
