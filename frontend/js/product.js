@@ -30,7 +30,7 @@ fetch(url + "/" + id)
     ul.setAttribute("class", "color");
     choix.setAttribute("class", "choix");
     text.setAttribute("class", "text");
-    add.setAttribute("href", /*`./cart.html?id=${data._id}`*/ "#");
+    add.setAttribute("href", `./cart.html?id=${data._id}`);
         
     only.appendChild(img);
     only.appendChild(text).appendChild(h2);
