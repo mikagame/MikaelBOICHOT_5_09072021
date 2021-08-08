@@ -1,13 +1,16 @@
+//Récupération id
 const searchParams = window.location.search;
 const url = "http://localhost:3000/api/teddies";
 const urlParams = new URLSearchParams(searchParams);
 const id = urlParams.get("id");
 
+//import {create} from index;
+
+//Création ourson choisi
+
 fetch(url + "/" + id)
 .then(response => response.json())
 .then(data => {
-    console.log(data);
-
     const text = document.createElement("div");
     const img = document.createElement("img");
     const h2 = document.createElement("h2");
@@ -27,7 +30,7 @@ fetch(url + "/" + id)
     ul.setAttribute("class", "color");
     choix.setAttribute("class", "choix");
     text.setAttribute("class", "text");
-    add.setAttribute("href", `./cart.html?id=${data._id}`);
+    add.setAttribute("href", /*`./cart.html?id=${data._id}`*/ "#");
         
     only.appendChild(img);
     only.appendChild(text).appendChild(h2);
@@ -45,8 +48,17 @@ fetch(url + "/" + id)
     only.appendChild(text).appendChild(add);
 
     function addCart() {
-      let dataText = JSON.stringify(data);
-      localStorage.setItem('tab',dataText);
+     
+
+      let result = confirm("Voulez-vous ajouter cet article au panier?");
+      
+      if(result) {
+        alert("Article ajouté");
+        let dataText = JSON.stringify(data);
+        localStorage.setItem('tab',dataText);
+      } else {
+        alert("Continuez vos achats");
+      }
        
     };
         

@@ -2,9 +2,7 @@ const url = "http://localhost:3000/api/teddies";
 
 // Récuperation et création articles
 
-fetch(url)
-.then(response => response.json())
-.then(data => {
+function create(data) {
     data.forEach(element => {
        
         const a = document.createElement("a");
@@ -27,6 +25,13 @@ fetch(url)
         div.appendChild(h3);
         div.appendChild(p);
     });
+}
+//export {create};
+
+fetch(url)
+.then(response => response.json())
+.then(data => {
+    create(data);  
 })
 .catch(function(error) {
     //erreur
