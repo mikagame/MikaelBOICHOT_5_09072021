@@ -1,5 +1,6 @@
 const url = "http://localhost:3000/api/teddies";
 
+// Récuperation et création articles
 
 fetch(url)
 .then(response => response.json())
@@ -13,7 +14,6 @@ fetch(url)
         const h3 = document.createElement("h3");
         const p = document.createElement("p");
         
-
         a.setAttribute("href", `./frontend/product.html?id=${element._id}`);
         div.setAttribute("id", element._id);
         img.src = element.imageUrl;
@@ -26,8 +26,6 @@ fetch(url)
         div.appendChild(h2);
         div.appendChild(h3);
         div.appendChild(p);
-
-
     });
 })
 .catch(function(error) {

@@ -153,6 +153,11 @@ h1 {
   padding: 20px;
 }
 
+#commande {
+  display: flex;
+  justify-content: space-between;
+}
+
 .cart {
   display: flex;
   align-items: center;
