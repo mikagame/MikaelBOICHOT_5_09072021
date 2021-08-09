@@ -30,7 +30,7 @@ fetch(url + "/" + id)
     ul.setAttribute("class", "color");
     choix.setAttribute("class", "choix");
     text.setAttribute("class", "text");
-    add.setAttribute("href", `./cart.html?id=${data._id}`);
+    //add.setAttribute("href", `./cart.html?id=${data._id}`);
         
     only.appendChild(img);
     only.appendChild(text).appendChild(h2);
@@ -54,14 +54,30 @@ fetch(url + "/" + id)
       
       if(result) {
         alert("Article ajouté");
-        let dataText = JSON.stringify(data);
-        localStorage.setItem('tab',dataText);
+
+        let memory = JSON.parse(localStorage.getItem("article")); //converti les données JSON en objet JS
+    
+        // s'il y a un produit
+        if(memory) {
+          memory.push(data)
+          localStorage.setItem("article", JSON.stringify(memory));
+
+          //si pas de produit 
+        } else {
+        memory = [];
+        
+        localStorage.setItem("article", JSON.stringify(memory));
+        memory.push(data)
+}
+        
+
       } else {
         alert("Continuez vos achats");
       }
        
     };
         
-    add.addEventListener('click', addCart);          
+    add.addEventListener('click', addCart);        
+    
 })
 
