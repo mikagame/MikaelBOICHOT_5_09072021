@@ -19,7 +19,6 @@ fetch(url + "/" + id)
     const choix = document.createElement("div");
     const ul = document.createElement("ul");
     const add = document.createElement("a");
-    
     img.src = data.imageUrl;
     const price = data.price /100;
     h2.innerHTML = data.name;
@@ -30,26 +29,59 @@ fetch(url + "/" + id)
     ul.setAttribute("class", "color");
     choix.setAttribute("class", "choix");
     text.setAttribute("class", "text");
-    //add.setAttribute("href", `./cart.html?id=${data._id}`);
+    add.setAttribute("href", "#");
         
     only.appendChild(img);
     only.appendChild(text).appendChild(h2);
     only.appendChild(text).appendChild(h3);
     only.appendChild(text).appendChild(p);
-        
+
+     //choix quantité 
+
+     const quantity = document.createElement('div');
+     const nbAdd = document.createElement('div');
+     const nbRemove = document.createElement('div');
+     quantity.setAttribute('class', 'qt');
+     nbAdd.innerHTML = "+";
+     nbRemove.innerHTML = "-";
+     nbAdd.setAttribute('class', 'plus');
+     nbRemove.setAttribute('class', 'moins');
+ 
+     let nb = 0;
+     
+     function qtAdd() {
+       nb++;
+     }
+ 
+     function qtRemove() {
+       nb--;
+     }
+ 
+     nbAdd.addEventListener('click', qtAdd);
+     nbRemove.addEventListener('click', qtRemove);
+ 
+     quantity.innerHTML = "Quantité : " + nb;
+    
+ 
+    console.log(nb);
+    only.appendChild(text).appendChild(quantity);
+    only.appendChild(text).appendChild(quantity).appendChild(nbAdd);
+    only.appendChild(text).appendChild(quantity).appendChild(nbRemove);
+
+    // choix couleur 
+
     data.colors.forEach(element => {
     const a = document.createElement("a");
     const li = document.createElement("li");
     a.innerHTML =  element;
     a.setAttribute("href", "#");
+    
     only.appendChild(choix).appendChild(ul).appendChild(li).appendChild(a);
     });
-
     only.appendChild(text).appendChild(add);
 
     function addCart() {
      
-
       let result = confirm("Voulez-vous ajouter cet article au panier?");
       
       if(result) {
@@ -68,16 +100,15 @@ fetch(url + "/" + id)
         
         localStorage.setItem("article", JSON.stringify(memory));
         memory.push(data)
-}
-        
-
+        }
       } else {
         alert("Continuez vos achats");
-      }
-       
+      }    
     };
-        
+   
     add.addEventListener('click', addCart);        
     
 })
+
+
 

@@ -34,5 +34,10 @@ fetch(url)
     create(data);  
 })
 .catch(function(error) {
-    //erreur
+
+    const err = document.createElement('div');
+    err.setAttribute('id', 'erreur');
+    err.innerHTML = "Une erreur est survenue à la récupération des données";
+    contain.appendChild(err);
+
 })

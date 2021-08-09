@@ -146,6 +146,11 @@ h1 {
   margin-top: 0;
 }
 
+#erreur {
+  font-size: 20px;
+  text-align: center;
+}
+
 #cart {
   background-color: #f3eaf1;
   margin: 20px 30px 20px 30px;
@@ -153,11 +158,38 @@ h1 {
   padding: 20px;
 }
 
+#clear {
+  margin-bottom: 20px;
+}
+#clear p {
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 5px;
+  width: 15%;
+  text-align: center;
+  border-radius: 15px;
+}
+
 .ligne {
-  display: flex;
+  /*display: flex;
   justify-content: space-between;
   margin-top: 10px;
+  margin-bottom: 10px;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 10px;
+}
+
+.prix {
+  text-align: right;
+}
+
+.remove {
+  padding: 5px;
+  background-color: red;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .cart {
@@ -278,7 +310,31 @@ label {
 
 .choix {
   position: relative;
-  top: 200px;
+  top: 300px;
+}
+
+.qt {
+  display: flex;
+}
+
+.plus {
+  margin-left: 10px;
+  background-color: #915cfb;
+  border-radius: 15px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.moins {
+  margin-left: 10px;
+  background-color: #915cfb;
+  border-radius: 15px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 
 /*** colors ***/
@@ -292,7 +348,7 @@ label {
 
 #only img {
   object-fit: cover;
-  height: 500px;
+  height: 400px;
   border-radius: 15px;
   margin: 0 30px 30px 30px;
 }
