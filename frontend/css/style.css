@@ -227,17 +227,17 @@ h1 {
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: black;
-  background-color: #f3eaf1;
-  border: 1px solid black;
+  color: white;
+  background-color: #500901;
+  border: 1px solid transparent;
   border-radius: 15px;
-  box-shadow: 2px 2px 2px black;
+  box-shadow: 2px 2px 2px transparent;
   transition: all 0.3s;
 }
 #teddies a:hover {
-  color: #6c1bee;
-  border: 1px solid #6c1bee;
-  box-shadow: 2px 2px 2px #6c1bee;
+  background-color: #be0901;
+  /*border: 1px solid rgb(78, 9, 1);
+  box-shadow: 2px 2px 2px rgb(78, 9, 1);*/
 }
 #teddies h2, #teddies h3 {
   font-size: 16px;
