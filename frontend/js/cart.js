@@ -1,52 +1,27 @@
 
 let affiche = JSON.parse(localStorage.getItem("article")); 
 
-console.log(affiche.length);
-
-let total = 0;
+let totalCommand = 0;
 affiche.forEach(element => {
     
-    let ligne = document.createElement('div');
-    ligne.setAttribute('class', 'ligne');
+    let rowCommand = document.createElement('div');
+    let nameCommand = document.createElement('p');
+    let quantityCommand = document.createElement('p')
+    let priceCommand = document.createElement('p');
 
-    let nom = document.createElement('div');
-    nom.setAttribute('class', 'nom');
-    nom.innerHTML = element.name;
+    rowCommand.setAttribute('class', 'rowCommand');
+    nameCommand.innerHTML = element.name;
+    quantityCommand.innerHTML = "0";
+    priceCommand.innerHTML = element.price * 0.01 + ".00 €";
 
-    let prix = document.createElement('div');
-    prix.setAttribute('class', 'prix');
-    prix.innerHTML = element.price * 0.01 + ".00 €";
-
-    let remove = document.createElement('div');
-    
-    remove.setAttribute('class', 'remove');
-    remove.innerHTML = "retirer article";
-    commande.appendChild(ligne).appendChild(nom);
-    commande.appendChild(ligne).appendChild(remove);
-    commande.appendChild(ligne).appendChild(prix);
-    
-    total = element.price + total;
-
-    function supprime() {
-       commande.removeChild(ligne);
-       localStorage.removeItem()
-    }
-
-    remove.addEventListener('click', supprime);
-    
-    console.log(affiche);
-});
-
+    command.appendChild(rowCommand).appendChild(nameCommand);
+    command.appendChild(rowCommand).appendChild(quantityCommand);
+    command.appendChild(rowCommand).appendChild(priceCommand);
+    totalCommand = element.price + totalCommand;
+    });
 
 let afficheTotal = document.createElement('div');
-afficheTotal.setAttribute('class', 'total');
-afficheTotal.innerHTML = "Montant Total : " + total * 0.01 + ".00 €";
-commande.appendChild(afficheTotal);
+afficheTotal.setAttribute('class', 'totalCommand');
+afficheTotal.innerHTML = "Montant Total : " + totalCommand * 0.01 + ".00 €";
+command.appendChild(afficheTotal);
 
-function clearAll() {
-    localStorage.removeItem('article');
-    
-
-}
-
-clear.addEventListener('click', clearAll);

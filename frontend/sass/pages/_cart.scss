@@ -1,43 +1,22 @@
 #cart {
     background-color: rgb(243, 234, 241);
-    margin: 20px 30px 20px 30px;
+    margin: 20px 150px 20px 150px;
     border-radius: 15px;
     padding: 20px;
 }
 
-#clear {
-    margin-bottom: 20px;
+#row, .rowCommand {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    //margin-bottom: 5px;
     p {
-        cursor: pointer;
-        border: 1px solid black;
-        padding: 5px;
-        width: 15%;
         text-align: center;
-        border-radius: 15px;
+        margin: 5px;
     }
 }
 
-.ligne {
-    /*display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 10px;*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 10px;
-}
-
-.prix {
-    text-align: right;
-}
-
-.remove {
-    padding: 5px;
-    background-color: red;
-    border-radius: 15px;
-    text-align: center;
-    cursor: pointer;
-  
+#row p {
+    text-decoration: underline;
 }
 
 .cart {
@@ -45,16 +24,29 @@
     align-items: center;
 }
 
-.total {
+.totalCommand {
     margin-top: 10px;
-    text-align: right;
+    text-align: center;
 }
 
+#contact, #yourCart{
+    p {
+        text-align: center;
+    }
+}
 
+#contactInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+        margin: 10px;
+    }
+}
 
 .finish {
     text-align: center;
-
+    margin-top: 20px;
     a {
         padding: 10px 20px 10px 20px;
         text-decoration: none;
@@ -64,9 +56,7 @@
         border-radius: 10px;
         transition: all 0.4s;
         &:hover {
-            border: 2px solid rgb(149, 93, 238);;
-            
+            border: 2px solid rgb(149, 93, 238);;           
         }
     } 
-
 }

@@ -1,9 +1,10 @@
 header  {
-    background-color: rgb(243, 234, 241);
-    
-    padding-bottom: 15px;
-    img {
-        margin-left: 20px;
+    background-color: rgb(90, 9, 1);
+    padding: 15px;
+    img {  
+        margin-left: 10px;  
+        border-radius: 15px;
+        padding: 5px;
     }
 }
     
@@ -13,19 +14,18 @@ nav {
     align-items: center;
     justify-content: space-between;
     a {
+        margin-right: 10px;
         padding: 10px;
         text-decoration: none;
-        color: black;     
+        color: white;     
         border: 2px solid transparent;
         border-radius: 10px;
         transition: all 0.4s;
         font-size: 16px;
         font-weight: 600;
         &:hover {
-            color: rgb(108, 27, 238);
-            i {
-                color:rgb(108, 27, 238);
-            }
+            border: 2px solid white;
+            
         }
     }
     i {

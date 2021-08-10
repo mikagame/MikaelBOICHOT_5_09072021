@@ -14,18 +14,45 @@
         <img src="./img/logo-orinoco.png" alt="logo orinoco"/>
         
         <a href="mailto:Orinoco@contact.com">Contact</a>
-        <a class="cart" href="../index.html"><i class="fas fa-arrow-circle-left"></i>Accueil</a>
+        <a class="cart" href="../index.html">Accueil</a>
     </nav>
 </header>
 
 <section id="cart">
-    <div id="clear">
-        <p>Vider votre panier</p>
+    <div id="yourCart">
+        <p>Votre panier : </p>
+    </div>
+    <div id="row">
+        <p>Nom</p>
+        <p>Quantité</p>
+        <p>Prix</p>
+    </div>
+    <div id="command"></div>
+
+    <div id="contact">
+        <p>Vos coordonnées</p>
+        <div id="contactInput">
+            <div class="name">
+                <label for="firstName"></label>
+                <input id="firstName" type="text" placeholder="Prénom">
+            
+                <label for="lastName"></label>
+                <input id="lastName" type="text" placeholder="Nom">
+            </div>
+            <div class="address">
+                <label for="address"></label>
+                <input id="address" type="text" placeholder="Adresse">
+        
+                <label for="city"></label>
+                <input id="city" type="text" placeholder="Ville">
+            </div>
+            <div class="email">
+                <label for="email"></label>
+                <input id="email" type="text" placeholder="e-mail">
+            </div>
+        </div>
     </div>
 
-    <div id="commande">
-        
-    </div>
     <div class="finish">
         <a href="./confirmation.html">Terminer et payer</a>
     </div>

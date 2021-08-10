@@ -3,11 +3,13 @@ body {
 }
 
 header {
-  background-color: #f3eaf1;
-  padding-bottom: 15px;
+  background-color: #5a0901;
+  padding: 15px;
 }
 header img {
-  margin-left: 20px;
+  margin-left: 10px;
+  border-radius: 15px;
+  padding: 5px;
 }
 
 nav {
@@ -17,9 +19,10 @@ nav {
   justify-content: space-between;
 }
 nav a {
+  margin-right: 10px;
   padding: 10px;
   text-decoration: none;
-  color: black;
+  color: white;
   border: 2px solid transparent;
   border-radius: 10px;
   transition: all 0.4s;
@@ -27,10 +30,7 @@ nav a {
   font-weight: 600;
 }
 nav a:hover {
-  color: #6c1bee;
-}
-nav a:hover i {
-  color: #6c1bee;
+  border: 2px solid white;
 }
 nav i {
   margin-right: 10px;
@@ -145,43 +145,22 @@ h1 {
 
 #cart {
   background-color: #f3eaf1;
-  margin: 20px 30px 20px 30px;
+  margin: 20px 150px 20px 150px;
   border-radius: 15px;
   padding: 20px;
 }
 
-#clear {
-  margin-bottom: 20px;
-}
-#clear p {
-  cursor: pointer;
-  border: 1px solid black;
-  padding: 5px;
-  width: 15%;
-  text-align: center;
-  border-radius: 15px;
-}
-
-.ligne {
-  /*display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-bottom: 10px;*/
+#row, .rowCommand {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 10px;
 }
-
-.prix {
-  text-align: right;
-}
-
-.remove {
-  padding: 5px;
-  background-color: red;
-  border-radius: 15px;
+#row p, .rowCommand p {
   text-align: center;
-  cursor: pointer;
+  margin: 5px;
+}
+
+#row p {
+  text-decoration: underline;
 }
 
 .cart {
@@ -189,13 +168,27 @@ h1 {
   align-items: center;
 }
 
-.total {
+.totalCommand {
   margin-top: 10px;
-  text-align: right;
+  text-align: center;
+}
+
+#contact p, #yourCart p {
+  text-align: center;
+}
+
+#contactInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contactInput input {
+  margin: 10px;
 }
 
 .finish {
   text-align: center;
+  margin-top: 20px;
 }
 .finish a {
   padding: 10px 20px 10px 20px;
