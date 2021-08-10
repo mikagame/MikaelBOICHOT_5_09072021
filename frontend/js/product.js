@@ -22,7 +22,7 @@ fetch(url + "/" + id)
     img.src = data.imageUrl;
     const price = data.price /100;
     h2.innerHTML = data.name;
-    h3.innerHTML = "Prix : " + `${price}` + ".00 €";
+    h3.innerHTML = `${price}` + ".00 €";
     p.innerHTML = data.description;
     add.innerHTML = "Ajouter au panier";    
     ul.innerHTML = "Choix de la couleur : ";
