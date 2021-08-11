@@ -65,8 +65,9 @@ const request = {
     })
     .then(rep => rep.json() )  
     .then(value => {
-        console.log(value);    
+        
         localStorage.clear(); 
+        localStorage.setItem('cont', JSON.stringify(request.contact));  
         localStorage.setItem("orderId", value.orderId);
         localStorage.setItem('orderPrice', totalCommand);
         document.location.href = "confirmation.html";
