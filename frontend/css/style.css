@@ -54,24 +54,8 @@ nav .fa-bars {
   justify-content: center;
 }
 
-@media only screen and (max-width: 767px) {
-  header {
-    display: flex;
-    flex-direction: column;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  nav .fa-bars {
-    display: flex;
-    align-items: flex-end;
-  }
-}
 footer {
-  background-color: #f3eaf1;
+  background-color: #5a0901;
   margin: 20px 0px 0px 0px;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -79,10 +63,10 @@ footer {
 }
 footer a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 footer a:hover {
-  color: #6c1bee;
+  text-decoration: underline;
 }
 footer ul {
   list-style: none;
@@ -95,6 +79,8 @@ footer i {
 footer p {
   margin-bottom: 0;
   font-weight: bolder;
+  color: white;
+  margin-bottom: 5px;
 }
 
 .about, .pay {
@@ -109,8 +95,19 @@ footer p {
   justify-content: space-between;
 }
 
+.res-sociaux {
+  background: #f3eaf1;
+  border-radius: 15px;
+}
 .res-sociaux a {
+  display: inline-block;
+  text-align: center;
   padding: 10px;
+  color: black;
+}
+.res-sociaux a:hover {
+  color: blue;
+  transform: scale(1.2);
 }
 
 .nav-foot {
@@ -124,12 +121,6 @@ footer p {
   margin: 0;
 }
 
-@media only screen and (max-width: 767px) {
-  footer {
-    display: flex;
-    flex-direction: column;
-  }
-}
 h1 {
   font-size: 23px;
   text-align: center;
@@ -168,8 +159,8 @@ h1 {
   align-items: center;
 }
 
-.totalCommand {
-  margin-top: 10px;
+#total {
+  margin-top: 30px;
   text-align: center;
 }
 
@@ -186,21 +177,40 @@ h1 {
   margin: 10px;
 }
 
-.finish {
+#submit {
   text-align: center;
   margin-top: 20px;
 }
-.finish a {
+#submit a {
+  background-color: red;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   font-weight: bolder;
-  color: black;
+  color: white;
   border: 2px solid transparent;
   border-radius: 10px;
   transition: all 0.4s;
 }
-.finish a:hover {
-  border: 2px solid #955dee;
+#submit a:hover {
+  border: 2px solid white;
+  background-color: #068a22;
+  box-shadow: 2px 2px 8px #4e0901;
+}
+
+#clearCart {
+  margin-bottom: 15px;
+}
+#clearCart p {
+  background: red;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
+  display: inline;
+  cursor: pointer;
+}
+#clearCart p:hover {
+  background-color: #068a22;
+  box-shadow: 2px 2px 8px #4e0901;
 }
 
 #teddies {

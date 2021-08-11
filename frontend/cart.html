@@ -12,9 +12,10 @@
     <header>
     <nav>
         <img src="./img/logo-orinoco.png" alt="logo orinoco"/>
-        
+        <div class="link">
         <a href="mailto:Orinoco@contact.com">Contact</a>
         <a class="cart" href="../index.html">Accueil</a>
+    </div>
     </nav>
 </header>
 
@@ -22,40 +23,45 @@
     <div id="yourCart">
         <p>Votre panier : </p>
     </div>
+    <div id="clearCart">
+        <p>Vider le panier</p>
+    </div>
     <div id="row">
         <p>Nom</p>
         <p>Quantité</p>
         <p>Prix</p>
     </div>
     <div id="command"></div>
+    <div id="total"></div>
 
     <div id="contact">
         <p>Vos coordonnées</p>
-        <div id="contactInput">
+
+        <form id="contactInput">
             <div class="name">
                 <label for="firstName"></label>
-                <input id="firstName" type="text" placeholder="Prénom">
+                <input id="firstName" type="text" placeholder="Prénom" required>
             
                 <label for="lastName"></label>
-                <input id="lastName" type="text" placeholder="Nom">
+                <input id="lastName" type="text" placeholder="Nom" required>
             </div>
             <div class="address">
                 <label for="address"></label>
-                <input id="address" type="text" placeholder="Adresse">
+                <input id="address" type="text" placeholder="Adresse" required>
         
                 <label for="city"></label>
-                <input id="city" type="text" placeholder="Ville">
+                <input id="city" type="text" placeholder="Ville" required>
             </div>
             <div class="email">
                 <label for="email"></label>
-                <input id="email" type="text" placeholder="e-mail">
+                <input id="email" type="email" placeholder="e-mail" required>
             </div>
-        </div>
+            <div id="submit"><a href="#">Terminer et payer</a></div>
+
+        </form>
     </div>
 
-    <div class="finish">
-        <a href="./confirmation.html">Terminer et payer</a>
-    </div>
+    
 </section>
 
 
@@ -76,8 +82,6 @@
                 <a href=""><li>Paiement en plusieurs fois</li></a>
                 <a href=""><li>Chèques-cadeaux</li></a>
             </ul>
-
-
         </div>
         <div class="res-sociaux">
             <a aria-label="facebook" href="facebook.com"><i class="fab fa-facebook"></i></a>

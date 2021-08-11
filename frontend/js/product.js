@@ -59,13 +59,13 @@ fetch(url + "/" + id)
     let memory = JSON.parse(localStorage.getItem("article")); //converti les données JSON en objet JS
     // s'il y a un produit
     if(memory) {
-      memory.push(data)
+      memory.push(data._id)
       localStorage.setItem("article", JSON.stringify(memory));
       //si pas de produit 
     } else {
     memory = [];
     localStorage.setItem("article", JSON.stringify(memory));
-    memory.push(data)
+    memory.push(data._id)
     } 
   };
   

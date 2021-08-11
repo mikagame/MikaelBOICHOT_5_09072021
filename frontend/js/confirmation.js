@@ -1,17 +1,5 @@
-let requestObject = {};
-requestObject.contact = contact;
-requestObject.products = products;
+let a = localStorage.getItem('orderId');
+let b = localStorage.getItem('orderPrice');
 
-fetch(url + "/order", {
-    method: 'POST',
-    body: JSON.stringify(recup),
-    headers: {
-        'Content-Type': 'application/json'
-    }
-})
-.then(rep => rep.json() )
-
-.then(value => {
-    
-    console.log(value);
-})
+document.getElementById('thanks').innerHTML = "Nous vous remercions pour votre commande";
+document.getElementById('result').innerHTML =  "Voici l'id de votre commande : " + a + ", pour un montant total de : " + b + ".00 €.";

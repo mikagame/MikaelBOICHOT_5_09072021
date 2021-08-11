@@ -24,8 +24,8 @@
     align-items: center;
 }
 
-.totalCommand {
-    margin-top: 10px;
+#total {
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -44,19 +44,40 @@
     }
 }
 
-.finish {
+#submit {
     text-align: center;
     margin-top: 20px;
+    
     a {
+        background-color: red;
         padding: 10px 20px 10px 20px;
         text-decoration: none;
         font-weight: bolder;
-        color: black;
+        color: white;
         border: 2px solid transparent;
         border-radius: 10px;
         transition: all 0.4s;
         &:hover {
-            border: 2px solid rgb(149, 93, 238);;           
+            border: 2px solid white;
+            background-color: rgb(6, 138, 34);    
+            box-shadow: 2px 2px 8px rgb(78, 9, 1);      
         }
     } 
+}
+
+#clearCart {
+    margin-bottom: 15px;
+    p {
+        background: red;
+        color: white;
+        padding: 10px;
+        border-radius: 15px;
+        display: inline;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(6, 138, 34);    
+            box-shadow: 2px 2px 8px rgb(78, 9, 1); 
+        }
+        
+    }
 }
