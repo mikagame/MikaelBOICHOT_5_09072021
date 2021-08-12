@@ -148,7 +148,7 @@ h2 {
 
 #row, .rowCommand {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 #row p, .rowCommand p {
   text-align: center;

@@ -1,11 +1,12 @@
-//Récupération id
-const searchParams = window.location.search;
+// *** URL API ***
 const url = "http://localhost:3000/api/teddies";
+
+// *** Récupération id ***
+const searchParams = window.location.search;
 const urlParams = new URLSearchParams(searchParams);
 const id = urlParams.get("id");
 
-//Création ourson choisi
-
+// *** Création ourson choisi ***
 fetch(url + "/" + id)
 .then(response => response.json())
 .then(data => {
@@ -32,7 +33,8 @@ fetch(url + "/" + id)
   labelQuantity.setAttribute('for', 'quantity');
   quantity.setAttribute('id', 'quantity');
   quantity.type = "number";
-  quantity.min = 0;
+  quantity.min = 1;
+  quantity.value = 1;
   labelQuantity.innerHTML = "Quantité : ";
 
   // *** choix couleur ***
@@ -56,16 +58,35 @@ fetch(url + "/" + id)
   // *** ajouter au panier ***
   function addCart() {
     alert("Article ajouté");
-    let memory = JSON.parse(localStorage.getItem("article")); //converti les données JSON en objet JS
+    let memory = JSON.parse(localStorage.getItem('article')); //converti les données JSON en objet JS
+    
+    let teddyObject = {};
     // s'il y a un produit
     if(memory) {
-      memory.push(data._id)
-      localStorage.setItem("article", JSON.stringify(memory));
+      //memory.push(data._id);
+      teddyObject = {
+        id: data._id,
+        quantity: quantity.value,
+        color: color.value
+      };
+      memory.push(teddyObject);
+      localStorage.setItem('article', JSON.stringify(memory));
+      
+      console.log(color.value)
       //si pas de produit 
     } else {
     memory = [];
+    //memory.push(data._id);
+
+    teddyObject = {
+      id: data._id,
+      quantity: quantity.value,
+      color: color.value
+    };
+    memory.push(teddyObject);
     localStorage.setItem("article", JSON.stringify(memory));
-    memory.push(data._id)
+    
+    console.log(color.value)
     } 
   };
   

@@ -1,37 +1,34 @@
 const url = "http://localhost:3000/api/teddies";
 
-let affiche = JSON.parse(localStorage.getItem("article")); 
-//console.log(affiche);
-
-
+let memory = JSON.parse(localStorage.getItem('article')); 
+console.log(memory)
 let totalCommand = 0;
-affiche.forEach(element => {
+memory.forEach(element=> {
     
-    console.log(element)
-    fetch(url +"/" + element)
+    fetch(url +"/" + element.id)
     .then(resp => resp.json())
     .then(data => {
         
-        console.log(data);
         let rowCommand = document.createElement('div');
         let nameCommand = document.createElement('p');
+        let colorCommand = document.createElement('p');
         let quantityCommand = document.createElement('p')
         let priceCommand = document.createElement('p');
-    
+        
         rowCommand.setAttribute('class', 'rowCommand');
         nameCommand.innerHTML = data.name;
-        quantityCommand.innerHTML = "0";
-        priceCommand.innerHTML = data.price * 0.01 + ".00 €";
+        colorCommand.innerHTML = element.color;
+        quantityCommand.innerHTML = element.quantity;
+        priceCommand.innerHTML = (data.price * 0.01 * element.quantity) + ".00 €";
         command.appendChild(rowCommand).appendChild(nameCommand);
+        command.appendChild(rowCommand).appendChild(colorCommand);
         command.appendChild(rowCommand).appendChild(quantityCommand);
         command.appendChild(rowCommand).appendChild(priceCommand);
-
-        totalCommand = data.price * 0.01 + totalCommand;  
-        console.log(totalCommand)
+        totalCommand = (data.price * 0.01 * element.quantity) + totalCommand;  
         document.getElementById('total').innerHTML = "Montant total : " + totalCommand +".00 €";
     })
     
-console.log(totalCommand)
+
     let firstNameInput = document.getElementById('firstName');
     let lastNameInput =  document.getElementById('lastName');
     let addressInput = document.getElementById('address');
@@ -44,18 +41,24 @@ function clearCart() {
 
 document.getElementById('clearCart').addEventListener('click', clearCart)
 
-function orderConfirm() {
-const request = {
-    contact: {
-        firstName: firstNameInput.value,
-        lastName: lastNameInput.value,
-        address: addressInput.value,
-        city: cityInput.value,
-        email: emailInput.value,
-    },
-    products: affiche,
+let memoryId = [];
+memory.forEach(element => {
+    memoryId.push(element.id)
+    
+})
+console.log(memoryId)
 
-};
+function orderConfirm() {
+    const request = {
+        contact: {
+            firstName: firstNameInput.value,
+            lastName: lastNameInput.value,
+            address: addressInput.value,
+            city: cityInput.value,
+            email: emailInput.value,
+        },
+        products: memoryId,
+    };
     fetch(url + "/order", {
         method: 'POST',
         body: JSON.stringify(request),
@@ -64,8 +67,8 @@ const request = {
         }
     })
     .then(rep => rep.json() )  
-    .then(value => {
-        
+    .then(value => {  
+        console.log(value)
         localStorage.clear(); 
         localStorage.setItem('cont', JSON.stringify(request.contact));  
         localStorage.setItem("orderId", value.orderId);
@@ -74,5 +77,4 @@ const request = {
     })   
 }
 document.getElementById('submit').addEventListener('click', orderConfirm);
-
-})
+});
