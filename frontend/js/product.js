@@ -63,7 +63,6 @@ fetch(url + "/" + id)
     let teddyObject = {};
     // s'il y a un produit
     if(memory) {
-      //memory.push(data._id);
       teddyObject = {
         id: data._id,
         quantity: quantity.value,
@@ -71,13 +70,10 @@ fetch(url + "/" + id)
       };
       memory.push(teddyObject);
       localStorage.setItem('article', JSON.stringify(memory));
-      
-      console.log(color.value)
+    
       //si pas de produit 
     } else {
     memory = [];
-    //memory.push(data._id);
-
     teddyObject = {
       id: data._id,
       quantity: quantity.value,
@@ -85,8 +81,6 @@ fetch(url + "/" + id)
     };
     memory.push(teddyObject);
     localStorage.setItem("article", JSON.stringify(memory));
-    
-    console.log(color.value)
     } 
   };
   

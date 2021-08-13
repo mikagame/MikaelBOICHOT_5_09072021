@@ -1,7 +1,5 @@
 const url = "http://localhost:3000/api/teddies";
-
 let memory = JSON.parse(localStorage.getItem('article')); 
-console.log(memory)
 let totalCommand = 0;
 memory.forEach(element=> {
     
@@ -35,6 +33,24 @@ memory.forEach(element=> {
     let cityInput = document.getElementById('city');
     let emailInput = document.getElementById('email');
 
+   
+
+    if( 
+        firstNameInput.value &&
+        lastNameInput.value &&
+        addressInput.value &&
+        cityInput.value &&
+        emailInput.value
+    
+        ) {
+       // validate();
+       console.log("bonjour")
+       let b = document.getElementById('essai');
+       b.style.background = 'green';
+    } else {
+
+    }
+
 function clearCart() {
     localStorage.clear();
 };
@@ -46,10 +62,51 @@ memory.forEach(element => {
     memoryId.push(element.id)
     
 })
-console.log(memoryId)
+
 
 function orderConfirm() {
-    const request = {
+
+    if(
+        !firstNameInput.value ||
+        !lastNameInput.value ||
+        !addressInput.value ||
+        !cityInput.value ||
+        !emailInput.value
+    ) {
+        //erreur
+        alert("Vous devez renseigner tous les champs pour valider votre commande");
+        /*erreurContact.innerHTML = "Vous devez renseigner tous les champs pour valider votre commande";
+        document.appendChild(erreurContact);*/
+    } else {
+        const request = {
+            contact: {
+                firstName: firstNameInput.value,
+                lastName: lastNameInput.value,
+                address: addressInput.value,
+                city: cityInput.value,
+                email: emailInput.value,
+            },
+            products: memoryId,
+        };
+        fetch(url + "/order", {
+            method: 'POST',
+            body: JSON.stringify(request),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(rep => rep.json() )  
+        .then(value => {  
+            console.log(value)
+            localStorage.clear(); 
+            localStorage.setItem('cont', JSON.stringify(request.contact));  
+            localStorage.setItem("orderId", value.orderId);
+            localStorage.setItem('orderPrice', totalCommand);
+            document.location.href = "confirmation.html";
+        }) 
+
+    }
+    /*const request = {
         contact: {
             firstName: firstNameInput.value,
             lastName: lastNameInput.value,
@@ -74,7 +131,7 @@ function orderConfirm() {
         localStorage.setItem("orderId", value.orderId);
         localStorage.setItem('orderPrice', totalCommand);
         document.location.href = "confirmation.html";
-    })   
+    })  */ 
 }
 document.getElementById('submit').addEventListener('click', orderConfirm);
 });
