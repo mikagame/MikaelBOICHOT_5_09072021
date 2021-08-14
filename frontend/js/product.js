@@ -59,34 +59,54 @@ fetch(url + "/" + id)
   function addCart() {
     alert("Article ajouté");
     let memory = JSON.parse(localStorage.getItem('article')); //converti les données JSON en objet JS
-    
-    let teddyObject = {};
-    // s'il y a un produit
-    if(memory) {
-      teddyObject = {
+   
+    let teddyObject = {
         id: data._id,
         quantity: quantity.value,
         color: color.value
-      };
+    };
+    let c = 0;
+
+    // s'il y a un produit
+    if(memory) {
+//console.log(memory)
+      memory.forEach((element, index) =>  {if(element.id == teddyObject.id && element.color == teddyObject.color) 
+        {     
+         
+          let a = JSON.parse(element.quantity);
+          let b = JSON.parse(teddyObject.quantity);
+           c = index + 1;
+          element.quantity = 0;    
+          teddyObject.quantity = a + b;
+               
+        }     
+      }  
+      
+      );
+      //console.log(c)
+      if(c > 0) {
+        memory.splice(c - 1 , 1, teddyObject)
+        localStorage.setItem('article', JSON.stringify(memory));
+      } else {
       memory.push(teddyObject);
       localStorage.setItem('article', JSON.stringify(memory));
-    
+    }
       //si pas de produit 
     } else {
     memory = [];
-    teddyObject = {
-      id: data._id,
-      quantity: quantity.value,
-      color: color.value
-    };
     memory.push(teddyObject);
     localStorage.setItem("article", JSON.stringify(memory));
     } 
-  };
-  
+  }; 
   addTeddy.addEventListener('click', addCart); 
-
+})
+.catch(function(error) {
+  const err = document.createElement('div');
+  err.setAttribute('id', 'erreur');
+  err.innerHTML = "Une erreur est survenue à la récupération des données";
+  contain.appendChild(err);
 });
+
   
 
              

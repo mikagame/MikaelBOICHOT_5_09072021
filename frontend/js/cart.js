@@ -1,29 +1,32 @@
 const url = "http://localhost:3000/api/teddies";
 let memory = JSON.parse(localStorage.getItem('article')); 
 let totalCommand = 0;
+
 memory.forEach(element=> {
     
     fetch(url +"/" + element.id)
     .then(resp => resp.json())
     .then(data => {
+              
+            let rowCommand = document.createElement('div');
+            let nameCommand = document.createElement('p');
+            let colorCommand = document.createElement('p');
+            let quantityCommand = document.createElement('p')
+            let priceCommand = document.createElement('p');
+            
+            rowCommand.setAttribute('class', 'rowCommand');
+            nameCommand.innerHTML = data.name;
+            colorCommand.innerHTML = element.color;
+            quantityCommand.innerHTML = element.quantity;
+            priceCommand.innerHTML = (data.price * 0.01 * element.quantity) + ".00 €";
+            command.appendChild(rowCommand).appendChild(nameCommand);
+            command.appendChild(rowCommand).appendChild(colorCommand);
+            command.appendChild(rowCommand).appendChild(quantityCommand);
+            command.appendChild(rowCommand).appendChild(priceCommand);
+            totalCommand = (data.price * 0.01 * element.quantity) + totalCommand;  
+            document.getElementById('total').innerHTML = "Montant total : " + totalCommand +".00 €";
         
-        let rowCommand = document.createElement('div');
-        let nameCommand = document.createElement('p');
-        let colorCommand = document.createElement('p');
-        let quantityCommand = document.createElement('p')
-        let priceCommand = document.createElement('p');
-        
-        rowCommand.setAttribute('class', 'rowCommand');
-        nameCommand.innerHTML = data.name;
-        colorCommand.innerHTML = element.color;
-        quantityCommand.innerHTML = element.quantity;
-        priceCommand.innerHTML = (data.price * 0.01 * element.quantity) + ".00 €";
-        command.appendChild(rowCommand).appendChild(nameCommand);
-        command.appendChild(rowCommand).appendChild(colorCommand);
-        command.appendChild(rowCommand).appendChild(quantityCommand);
-        command.appendChild(rowCommand).appendChild(priceCommand);
-        totalCommand = (data.price * 0.01 * element.quantity) + totalCommand;  
-        document.getElementById('total').innerHTML = "Montant total : " + totalCommand +".00 €";
+       
     })
     
 
@@ -104,34 +107,7 @@ function orderConfirm() {
             localStorage.setItem('orderPrice', totalCommand);
             document.location.href = "confirmation.html";
         }) 
-
     }
-    /*const request = {
-        contact: {
-            firstName: firstNameInput.value,
-            lastName: lastNameInput.value,
-            address: addressInput.value,
-            city: cityInput.value,
-            email: emailInput.value,
-        },
-        products: memoryId,
-    };
-    fetch(url + "/order", {
-        method: 'POST',
-        body: JSON.stringify(request),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(rep => rep.json() )  
-    .then(value => {  
-        console.log(value)
-        localStorage.clear(); 
-        localStorage.setItem('cont', JSON.stringify(request.contact));  
-        localStorage.setItem("orderId", value.orderId);
-        localStorage.setItem('orderPrice', totalCommand);
-        document.location.href = "confirmation.html";
-    })  */ 
 }
 document.getElementById('submit').addEventListener('click', orderConfirm);
 });

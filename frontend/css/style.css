@@ -233,7 +233,14 @@ h2 {
 
 #terminate {
   text-align: center;
-  margin: 50px 150px 50px 150px;
+  margin: 120px 150px 50px 150px;
+  border: 1px solid #5a0901;
+  border-radius: 15px;
+  padding: 20px 0 20px 0;
+}
+
+#confirm, #result {
+  margin-bottom: 20px;
 }
 
 #teddies {

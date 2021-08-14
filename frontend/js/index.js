@@ -17,6 +17,7 @@ function create(data) {
         teddies.appendChild(a).appendChild(img);
         teddies.appendChild(a).appendChild(div).appendChild(nameTeddy);
         teddies.appendChild(a).appendChild(div).appendChild(priceTeddy);
+       
     });
 }
 
