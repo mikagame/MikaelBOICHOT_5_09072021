@@ -18,6 +18,7 @@ fetch(url + "/" + id)
   const priceTeddy = document.createElement("p");
   const descriptionTeddy = document.createElement("p");
   img.src = data.imageUrl;
+  text.setAttribute('id', 'text')
   nameTeddy.innerHTML = data.name;
   priceTeddy.innerHTML = `${data.price / 100}` + ".00 €";
   descriptionTeddy.innerHTML = data.description;

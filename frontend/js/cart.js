@@ -1,6 +1,11 @@
 const url = "http://localhost:3000/api/teddies";
 let memory = JSON.parse(localStorage.getItem('article')); 
 let totalCommand = 0;
+console.log(memory)
+if(!memory) {
+    infoCart.innerHTML = "Veuillez remplir votre panier"; 
+    row.innerHTML = "";
+}
 
 memory.forEach(element=> {
     
@@ -25,18 +30,14 @@ memory.forEach(element=> {
             command.appendChild(rowCommand).appendChild(priceCommand);
             totalCommand = (data.price * 0.01 * element.quantity) + totalCommand;  
             document.getElementById('total').innerHTML = "Montant total : " + totalCommand +".00 €";
-        
-       
+              
     })
     
-
     let firstNameInput = document.getElementById('firstName');
     let lastNameInput =  document.getElementById('lastName');
     let addressInput = document.getElementById('address');
     let cityInput = document.getElementById('city');
     let emailInput = document.getElementById('email');
-
-   
 
     if( 
         firstNameInput.value &&
@@ -55,7 +56,9 @@ memory.forEach(element=> {
     }
 
 function clearCart() {
+    memory = [];
     localStorage.clear();
+    console.log(memory)
 };
 
 document.getElementById('clearCart').addEventListener('click', clearCart)
@@ -78,8 +81,7 @@ function orderConfirm() {
     ) {
         //erreur
         alert("Vous devez renseigner tous les champs pour valider votre commande");
-        /*erreurContact.innerHTML = "Vous devez renseigner tous les champs pour valider votre commande";
-        document.appendChild(erreurContact);*/
+       
     } else {
         const request = {
             contact: {
@@ -111,3 +113,5 @@ function orderConfirm() {
 }
 document.getElementById('submit').addEventListener('click', orderConfirm);
 });
+
+

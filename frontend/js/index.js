@@ -16,8 +16,7 @@ function create(data) {
         priceTeddy.innerHTML = `${element.price / 100}` + ".00 €";
         teddies.appendChild(a).appendChild(img);
         teddies.appendChild(a).appendChild(div).appendChild(nameTeddy);
-        teddies.appendChild(a).appendChild(div).appendChild(priceTeddy);
-       
+        teddies.appendChild(a).appendChild(div).appendChild(priceTeddy);     
     });
 }
 
@@ -32,3 +31,7 @@ fetch(url)
     err.innerHTML = "Une erreur est survenue à la récupération des données";
     contain.appendChild(err);
 });
+
+let memory = JSON.parse(localStorage.getItem('article')); 
+
+console.log(memory)
