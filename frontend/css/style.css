@@ -37,7 +37,7 @@ nav a {
   border: 2px solid transparent;
   border-radius: 10px;
   transition: all 0.4s;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 nav a:hover {
@@ -126,7 +126,7 @@ footer p {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 18px;
 }
 .nav-foot p {
   font-weight: normal;
@@ -136,7 +136,7 @@ footer p {
 h1 {
   display: flex;
   justify-content: center;
-  font-size: 23px;
+  font-size: 28px;
   color: white;
   margin: 20px 0 20px 0;
 }
@@ -146,7 +146,8 @@ h2 {
   color: white;
 }
 
-#erreur {
+#errorIndex {
+  margin-top: 100px;
   font-size: 20px;
   text-align: center;
 }

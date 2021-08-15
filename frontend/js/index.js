@@ -26,10 +26,11 @@ fetch(url)
     create(data);  
 })
 .catch(function(error) {
-    const err = document.createElement('div');
-    err.setAttribute('id', 'erreur');
+    /*const err = document.createElement('div');
     err.innerHTML = "Une erreur est survenue à la récupération des données";
-    contain.appendChild(err);
+    errorIndex.appendChild(err);*/
+    errorIndex.innerHTML = "Une erreur est survenue à la récupération des données";
+   
 });
 
 let memory = JSON.parse(localStorage.getItem('article')); 

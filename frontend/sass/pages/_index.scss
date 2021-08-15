@@ -1,7 +1,7 @@
 h1 {
     display: flex;
     justify-content: center;
-    font-size: 23px;
+    font-size: 28px;
     color: white;
     margin: 20px 0 20px 0;
 }
@@ -11,7 +11,9 @@ h2 {
     color: white;
 }
 
-#erreur {
+
+#errorIndex {
+    margin-top: 100px;
     font-size: 20px;
     text-align: center;
 }
