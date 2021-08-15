@@ -59,6 +59,9 @@ function clearCart() {
     memory = [];
     localStorage.clear();
     console.log(memory)
+    command.innerHTML = "";
+    infoCart.innerHTML = "Veuillez remplir votre panier"; 
+    document.getElementById('total').innerHTML = "";
 };
 
 document.getElementById('clearCart').addEventListener('click', clearCart)
@@ -66,6 +69,7 @@ document.getElementById('clearCart').addEventListener('click', clearCart)
 let memoryId = [];
 memory.forEach(element => {
     memoryId.push(element.id)
+
     
 })
 

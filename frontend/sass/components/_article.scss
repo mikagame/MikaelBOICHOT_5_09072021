@@ -40,7 +40,7 @@
 
 #only {
     display: flex;
-    margin: 60px 200px 0 150px;
+    margin: 60px 200px 0 50px;
     border: 1px solid transparent;
     border-radius: 15px;
     box-shadow: 2px 2px 2px transparent;
@@ -72,7 +72,7 @@ label {
    text-align: center;
    margin: auto;
     cursor: pointer;
-    background-color: rgb(121, 51, 38);
+    background-color: rgb(70, 70, 131);
     &:hover {
         background-color: rgb(179, 36, 11);
     }

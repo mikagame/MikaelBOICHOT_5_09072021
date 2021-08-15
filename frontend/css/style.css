@@ -115,10 +115,10 @@ footer p {
   display: inline-block;
   text-align: center;
   padding: 10px;
-  color: black;
+  color: #464683;
 }
 .res-sociaux a:hover {
-  color: blue;
+  color: #b3240b;
   transform: scale(1.2);
 }
 
@@ -324,7 +324,7 @@ h2 {
 
 #only {
   display: flex;
-  margin: 60px 200px 0 150px;
+  margin: 60px 200px 0 50px;
   border: 1px solid transparent;
   border-radius: 15px;
   box-shadow: 2px 2px 2px transparent;
@@ -356,7 +356,7 @@ label {
   text-align: center;
   margin: auto;
   cursor: pointer;
-  background-color: #793326;
+  background-color: #464683;
 }
 #addTeddy:hover {
   background-color: #b3240b;
@@ -373,9 +373,10 @@ label {
 
 #only img {
   object-fit: cover;
+  width: 100%;
   height: 300px;
   border-radius: 15px;
-  margin: 0 30px 30px 30px;
+  margin: 0 30px 30px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
