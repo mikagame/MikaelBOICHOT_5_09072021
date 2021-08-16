@@ -86,6 +86,7 @@ label {
     #teddies {
         display: flex;
         flex-direction: column;
+        padding-bottom: 280px;
     }
 }
 
@@ -94,6 +95,7 @@ label {
     #teddies {
         display: grid;
         grid-template-columns: 1fr 1fr ;
+        padding-bottom: 150px;
     }
 
 }

@@ -1,44 +1,47 @@
-header  {
-   // background-color: rgb(90, 9, 1);
-   background-color: rgb(70, 70, 131);
+header {
+    background-color: rgb(70, 70, 131);
     padding: 30px 15px 30px 15px;
-    img {  
-        margin-left: 10px;  
+
+    img {
+        margin-left: 10px;
         border-radius: 15px;
         padding: 5px;
     }
 }
-    
+
 nav {
     margin-right: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     a {
         margin-right: 10px;
         padding: 10px;
         text-decoration: none;
-        color: white;     
+        color: white;
         border: 2px solid transparent;
         border-radius: 10px;
         transition: all 0.4s;
         font-size: 18px;
         font-weight: 600;
+
         &:hover {
             border: 2px solid white;
-            
         }
     }
+
     i {
         margin-right: 10px;
         transition: all 0.4s;
     }
+
     .fa-arrow-circle-left {
         font-size: 25px;
         color: transparent;
         transition: all 0.4s;
-        
     }
+
     .fa-bars {
         display: none;
     }
@@ -51,9 +54,7 @@ nav {
 .search {
     display: flex;
     justify-content: center;
-    
 }
-
 
 @media only screen and (min-width: 500px) and (max-width: 767px) {
     nav {
@@ -64,12 +65,10 @@ nav {
     .link {
         margin-top: 50px;
     }
-    
 }
 
 @media only screen and (max-width: 499px) {
-
-   nav {
+    nav {
         display: flex;
         flex-direction: column;
     }
@@ -80,19 +79,23 @@ nav {
         grid-template-rows: 1fr 1fr;
         justify-items: center;
         width: 100%;
-        a:first-child{
+
+        a:first-child {
             grid-row: 1;
             grid-column-start: 1;
             grid-column-end: 3;
         }
+
         a:nth-child(2) {
             grid-row: 2;
             grid-column: 1;
         }
+
         a:nth-child(3) {
             grid-row: 2;
             grid-column: 2;
         }
+
         a {
             margin: 10px 0 10px 0;
         }
