@@ -413,7 +413,7 @@ label {
     flex-direction: column;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
+@media only screen and (min-width: 600px) and (max-width: 799px) {
   #teddies {
     display: grid;
     grid-template-columns: 1fr 1fr;
