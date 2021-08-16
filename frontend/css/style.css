@@ -286,6 +286,45 @@ h2 {
   font-size: 25px;
 }
 
+.infoAdd {
+  opacity: 0;
+  color: transparent;
+  padding: 20px;
+  height: 30px;
+  width: 150px;
+  position: relative;
+  bottom: 200px;
+  left: 200px;
+  border-radius: 15px;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    color: white;
+    background-color: #b3240b;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.newInfoAdd {
+  animation: show 4s ease-in-out;
+}
+
+/*.showInfoAdd {
+    opacity: 1;
+    color : white;
+    background-color: rgb(179, 36, 11);
+    transition: all 0.5s;
+}*/
 #contactInput {
   display: flex;
   flex-direction: column;
@@ -404,6 +443,9 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #f3eaf1;
+  padding: 20px;
+  border-radius: 15px;
 }
 
 label {

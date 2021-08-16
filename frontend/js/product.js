@@ -23,6 +23,7 @@ fetch(url + "/" + id)
   priceTeddy.innerHTML = `${data.price / 100}` + ".00 €";
   descriptionTeddy.innerHTML = data.description;
 
+
   // *** bouton ajout au panier ***
   const addTeddy = document.createElement("p");
   addTeddy.setAttribute('id', 'addTeddy');
@@ -56,9 +57,22 @@ fetch(url + "/" + id)
   only.appendChild(text).appendChild(labelQuantity).appendChild(quantity);
   only.appendChild(text).appendChild(addTeddy);
 
+  const info = document.createElement('p');
+  info.innerHTML = "Article ajouté";
+  info.classList.add('infoAdd');
+   only.appendChild(text).appendChild(info);
+
   // *** ajouter au panier ***
   function addCart() {
-    alert("Article ajouté");
+   // alert("Article ajouté");
+   info.classList.add('newInfoAdd')
+   
+    setTimeout(function() {
+      info.classList.remove('newInfoAdd');
+      
+      
+      }, 3000);
+
     let memory = JSON.parse(localStorage.getItem('article')); //converti les données JSON en objet JS
    
     let teddyObject = {

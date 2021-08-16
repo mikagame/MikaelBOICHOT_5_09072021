@@ -3,7 +3,7 @@ let memory = JSON.parse(localStorage.getItem('article'));
 let totalCommand = 0;
 console.log(memory)
 if(!memory) {
-    infoCart.innerHTML = "Veuillez remplir votre panier"; 
+    infoCart.innerHTML = "Votre panier Oriteddy est vide"; 
     row.innerHTML = "";
     document.getElementById('clearCart').innerHTML = "";
     second.innerHTML = "";
@@ -48,7 +48,7 @@ function clearCart() {
     localStorage.clear();
     console.log(memory)
     command.innerHTML = "";
-    infoCart.innerHTML = "Veuillez remplir votre panier"; 
+    infoCart.innerHTML = "Votre panier Oriteddy est vide"; 
     document.getElementById('total').innerHTML = "";
     row.innerHTML = "";
     document.getElementById('clearCart').innerHTML = "";
@@ -61,7 +61,6 @@ let memoryId = [];
 memory.forEach(element => {
     memoryId.push(element.id)
 
-    
 })
 
 
