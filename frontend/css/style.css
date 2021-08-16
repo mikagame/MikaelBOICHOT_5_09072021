@@ -287,16 +287,16 @@ h2 {
 }
 
 .infoAdd {
-  opacity: 0;
+  opacity: 1;
+  width: 30%;
   color: transparent;
   padding: 20px;
   height: 30px;
-  width: 150px;
   position: relative;
   bottom: 150px;
   left: 200px;
   border-radius: 15px;
-  opacity: 0.8;
+  background-color: #b3240b;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -372,6 +372,13 @@ h2 {
   box-shadow: 2px 2px 8px #4e0901;
 }
 
+@media only screen and (max-width: 799px) {
+  .infoAdd {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+  }
+}
 #terminate {
   text-align: center;
   margin: 120px 150px 50px 150px;
@@ -476,6 +483,11 @@ label {
   #only {
     display: flex;
     flex-direction: column;
+    padding-bottom: 280px;
+  }
+
+  #text {
+    margin-top: 20px;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 799px) {

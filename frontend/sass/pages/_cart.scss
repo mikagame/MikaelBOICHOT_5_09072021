@@ -80,16 +80,17 @@
 }
 
 .infoAdd {
-    opacity: 0;
+    opacity: 1;
+    width: 30%;
     color: transparent;
     padding: 20px;
     height: 30px;
-    width: 150px;
+    
     position: relative;
     bottom: 150px;
     left: 200px;
     border-radius: 15px;
-    opacity: 0.8;
+    background-color: rgb(179, 36, 11);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,6 +170,19 @@
         &:hover {    
             box-shadow: 2px 2px 8px rgb(78, 9, 1);   
         }
+        
+    }
+}
+
+
+@media only screen and (max-width: 799px) {
+
+    .infoAdd {
+        position: relative;
+        bottom: 0;
+        left: 50%;
+        
+
         
     }
 }

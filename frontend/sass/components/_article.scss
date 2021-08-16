@@ -97,6 +97,10 @@ label {
     #only {
         display: flex;
         flex-direction: column;
+        padding-bottom: 280px;
+    }
+    #text {
+        margin-top: 20px;
     }
 }
 
