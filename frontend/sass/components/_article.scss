@@ -46,6 +46,7 @@
     box-shadow: 2px 2px 2px transparent;
     padding-bottom: 150px;
     margin-bottom: 50px;
+    width: 70%;
     p {
         margin: 10px 0 10px 0;
     }
@@ -80,7 +81,7 @@ label {
     
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 599px) {
 
     #teddies {
         display: flex;
@@ -88,7 +89,7 @@ label {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1200px)  {
+@media only screen and (min-width: 600px) and (max-width: 1200px)  {
 
     #teddies {
         display: grid;
