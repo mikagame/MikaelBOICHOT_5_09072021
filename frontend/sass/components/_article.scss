@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    margin: 50px 150px 50px 150px;
+    margin: 50px;
     padding-bottom: 100px;
     a {
         display: flex;
@@ -78,5 +78,22 @@ label {
         background-color: rgb(179, 36, 11);
     }
     
+}
+
+@media only screen and (max-width: 767px) {
+
+    #teddies {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px)  {
+
+    #teddies {
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+
 }
 
