@@ -1,6 +1,6 @@
 #terminate {
     text-align: center;
-    margin: 120px 150px 50px 150px;
+    margin: 120px 20px 50px 20px;
     border: 1px solid rgb(90, 9, 1);
     border-radius: 15px;
     padding: 20px 0 20px 0;
@@ -8,5 +8,13 @@
 
 #confirm, #result {
 margin-bottom: 20px;
+}
+
+@media only screen  and (max-width: 767px) {
+
+    #terminate {
+        margin: 40px 15px 350px 15px;
+        font-size: 15px;
+    }
 }
 
