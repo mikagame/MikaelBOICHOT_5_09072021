@@ -28,7 +28,8 @@
 #total {
     margin-top: 30px;
     text-align: center;
-    background-color: rgb(70, 70, 131);
+    //background-color: rgb(70, 70, 131);
+    background-color: rgb(76, 76, 76);
     color:white;
     font-size: 18px;
     font-weight: 600;
@@ -40,7 +41,7 @@
 #contact{
     p {
         text-align: center;
-        background-color: rgb(70, 70, 131);
+        background-color: rgb(76, 76, 76);
     color:white;
     font-size: 18px;
     font-weight: 600;
@@ -51,7 +52,8 @@
 }
 
 #yourCart {
-    background-color: rgb(70, 70, 131);
+    //background-color: rgb(70, 70, 131);
+    background-color: rgb(76, 76, 76);
     color:white;
     font-size: 18px;
     font-weight: 600;
@@ -59,7 +61,6 @@
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     text-align: center;
-
 }
 
 
@@ -75,6 +76,7 @@
 
 #infoCart {
     text-align: center;
+    font-size: 25px;
 }
 
 #contactInput {
@@ -92,26 +94,27 @@
 #submit {
     text-align: center;
     margin-top: 20px;
-    background-color: rgb(70, 70, 131);
+    background-color: rgb(76, 76, 76);
     width: 100%;
     padding: 30px 0 30px 0;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     
     a {
-        background-color: rgb(100, 182, 111);
+        background-color: rgb(11, 182, 34);
         padding: 10px 20px 10px 20px;
         text-decoration: none;
         font-weight: bolder;
         color: white;
-        border: 2px solid white;
+        border: 2px solid transparent;
         border-radius: 10px;
         transition: all 0.4s;
         width: 100%;
         &:hover {
             
             background-color: rgb(2, 85, 20);    
-            box-shadow: 2px 2px 8px rgb(78, 9, 1);      
+            box-shadow: 2px 2px 8px rgb(78, 9, 1);  
+            border: 2px solid white;    
         }
     } 
 }

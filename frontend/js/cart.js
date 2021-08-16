@@ -5,6 +5,8 @@ console.log(memory)
 if(!memory) {
     infoCart.innerHTML = "Veuillez remplir votre panier"; 
     row.innerHTML = "";
+    document.getElementById('clearCart').innerHTML = "";
+    second.innerHTML = "";
 }
 
 memory.forEach(element=> {
@@ -39,21 +41,7 @@ memory.forEach(element=> {
     let cityInput = document.getElementById('city');
     let emailInput = document.getElementById('email');
 
-    if( 
-        firstNameInput.value &&
-        lastNameInput.value &&
-        addressInput.value &&
-        cityInput.value &&
-        emailInput.value
     
-        ) {
-       // validate();
-       console.log("bonjour")
-       let b = document.getElementById('essai');
-       b.style.background = 'green';
-    } else {
-
-    }
 
 function clearCart() {
     memory = [];
@@ -62,6 +50,9 @@ function clearCart() {
     command.innerHTML = "";
     infoCart.innerHTML = "Veuillez remplir votre panier"; 
     document.getElementById('total').innerHTML = "";
+    row.innerHTML = "";
+    document.getElementById('clearCart').innerHTML = "";
+    second.innerHTML = "";
 };
 
 document.getElementById('clearCart').addEventListener('click', clearCart)
