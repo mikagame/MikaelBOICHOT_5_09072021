@@ -64,6 +64,7 @@
 
 label {
     margin: 10px 0 10px 0;
+    padding: 20px;
 }
 #quantity {
     width: 50px;
@@ -98,6 +99,9 @@ label {
         display: flex;
         flex-direction: column;
         padding-bottom: 280px;
+        select, input {
+            padding: 10px;
+        }
     }
     #text {
         margin-top: 20px;
@@ -115,6 +119,9 @@ label {
     #only {
         display: flex;
         flex-direction: column;
+        select, input {
+            padding: 10px;
+        }
     }
 
 }
