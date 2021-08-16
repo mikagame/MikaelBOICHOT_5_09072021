@@ -1,5 +1,6 @@
 // *** URL API ***
- url = "http://localhost:3000/api/teddies";
+ /*url = "http://localhost:3000/api/teddies";*/
+ const url = "https://projet5oc.herokuapp.com/api/teddies";
 
 // *** Récupération id ***
 const searchParams = window.location.search;

@@ -1,4 +1,6 @@
-const url = "http://localhost:3000/api/teddies";
+/*const url = "http://localhost:3000/api/teddies";*/
+const url = "https://projet5oc.herokuapp.com/api/teddies";
+
 
 let memory = JSON.parse(localStorage.getItem('article'));
 let totalCommand = 0;

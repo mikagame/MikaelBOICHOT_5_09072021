@@ -1,4 +1,5 @@
-const url = "http://localhost:3000/api/teddies";    // *** URL API *** 
+/*const url = "http://localhost:3000/api/teddies";    // *** URL API *** */
+const url = "https://projet5oc.herokuapp.com/api/teddies";
 
 
 function create(data) {
