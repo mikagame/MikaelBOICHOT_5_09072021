@@ -1,5 +1,5 @@
 // *** URL API ***
-const url = "http://localhost:3000/api/teddies";
+ url = "http://localhost:3000/api/teddies";
 
 // *** Récupération id ***
 const searchParams = window.location.search;
@@ -64,7 +64,7 @@ fetch(url + "/" + id)
 
   // *** ajouter au panier ***
   function addCart() {
-   // alert("Article ajouté");
+ 
    info.classList.add('newInfoAdd')
    
     setTimeout(function() {
@@ -114,6 +114,7 @@ fetch(url + "/" + id)
     } 
   }; 
   addTeddy.addEventListener('click', addCart); 
+  
 })
 .catch(function(error) {
   const err = document.createElement('div');
@@ -121,8 +122,6 @@ fetch(url + "/" + id)
   err.innerHTML = "Une erreur est survenue à la récupération des données";
   contain.appendChild(err);
 });
-
-  
 
              
 

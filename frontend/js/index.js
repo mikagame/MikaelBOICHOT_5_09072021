@@ -1,6 +1,5 @@
-const url = "http://localhost:3000/api/teddies";
+const url = "http://localhost:3000/api/teddies";    // *** URL API *** 
 
-// Récuperation données et création articles
 
 function create(data) {
     data.forEach(element => { 
@@ -20,6 +19,7 @@ function create(data) {
     });
 }
 
+// Récuperation données et création articles
 fetch(url)
 .then(response => response.json())
 .then(data => {
@@ -32,6 +32,3 @@ fetch(url)
     errorIndex.appendChild(err)
 });
 
-let memory = JSON.parse(localStorage.getItem('article')); 
-
-console.log(memory)
