@@ -65,9 +65,11 @@ memory.forEach(element => {
     memory.forEach(element => {
         memoryId.push(element.id)
     })
-
+    
 // *** Passer commande ***
     function orderConfirm() {
+
+        
         // *** Vérification que les champs soient renseignés ***
         if (
             !firstNameInput.value ||
@@ -77,10 +79,19 @@ memory.forEach(element => {
             !emailInput.value
         ) {
             //erreur
-            alert("Vous devez renseigner tous les champs pour valider votre commande");
-
-        } else {
+            alert("Vous devez renseigner tous les champs  pour valider votre commande");
+        } 
+        
+        
+        if(
+            firstNameInput.validity.valid &&
+            lastNameInput.validity.valid &&
+            addressInput.validity.valid &&
+            cityInput.validity.valid &&
+            emailInput.validity.valid
+        ) {
             // *** création objet { valeur des inputs et id des produits }
+          
             const request = {
                 contact: {
                     firstName: firstNameInput.value,
@@ -109,6 +120,11 @@ memory.forEach(element => {
                     localStorage.setItem('orderPrice', totalCommand);
                     document.location.href = "confirmation.html";
                 })
+        } else {
+            
+                //erreur
+                alert("Vous devez renseigner tous les champs  pour valider votre commande");
+            
         }
     }
     document.getElementById('submit').addEventListener('click', orderConfirm);
