@@ -472,12 +472,22 @@ label {
     flex-direction: column;
     padding-bottom: 280px;
   }
+
+  #only {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media only screen and (min-width: 600px) and (max-width: 799px) {
   #teddies {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 150px;
+  }
+
+  #only {
+    display: flex;
+    flex-direction: column;
   }
 }
 /*** colors ***/
