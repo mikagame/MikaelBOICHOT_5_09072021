@@ -11,7 +11,6 @@ header {
 
 .back {
     display: flex;
-   
 }
 
 nav {
@@ -25,14 +24,14 @@ nav {
         padding: 10px;
         text-decoration: none;
         color: white;
-        border: 2px solid transparent;
+        border: 2px solid white;
         border-radius: 10px;
         transition: all 0.4s;
         font-size: 18px;
         font-weight: 600;
 
         &:hover {
-            border: 2px solid white;
+            background-color: rgb(179, 36, 11);
         }
     }
 
@@ -40,37 +39,23 @@ nav {
         margin-right: 10px;
         transition: all 0.4s;
     }
-
-    .fa-arrow-circle-left {
-        font-size: 25px;
-        color: transparent;
-        transition: all 0.4s;
-    }
-
-    .fa-bars {
-        display: none;
-    }
 }
 
 .link {
     display: flex;
 }
 
-.search {
-    display: flex;
-    justify-content: center;
-}
-
 @media only screen and (max-width: 767px) {
-    header{
+
+    header {
         padding: 0;
         padding-top: 20px;
     }
+
     nav {
         display: flex;
         flex-direction: column;
         margin: 0;
-        
     }
 
     .link {

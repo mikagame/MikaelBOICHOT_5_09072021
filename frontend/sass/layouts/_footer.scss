@@ -9,7 +9,8 @@ footer {
         text-decoration: none;
         color: white;     
         &:hover {  
-            text-decoration: underline;
+            text-decoration: underline ;
+            
         }
     }
     ul {
@@ -33,7 +34,7 @@ footer {
     align-items: flex-start;
     margin-right: 50px;
     flex-shrink: 0;
-
+    padding-right: 5px;
 }
 .row-foot {
     display: flex;
@@ -65,8 +66,6 @@ footer {
     }
 }
 
-
-
 @media only screen and (max-width: 767px) {
     
 .row-foot {
@@ -83,7 +82,4 @@ footer {
     flex-direction: column;
 }
 
-/*.about { 
-    margin-left: 50px;
-}*/
 }
