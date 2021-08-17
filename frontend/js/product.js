@@ -16,6 +16,7 @@ fetch(url + "/" + id)
   const img = document.createElement("img");
   const text = document.createElement("div");
   text.setAttribute('id', 'text');
+  
   const nameTeddy = document.createElement("p");
   const priceTeddy = document.createElement("p");
   const descriptionTeddy = document.createElement("p");
@@ -31,7 +32,7 @@ fetch(url + "/" + id)
   // *** bouton ajout au panier ***
   const addTeddy = document.createElement("p");
   addTeddy.setAttribute('id', 'addTeddy');
-  addTeddy.innerHTML = "Ajouter au panier";
+  addTeddy.innerHTML = "Ajouter";
   
   // *** choix quantité ***
   const quantity = document.createElement("input");
@@ -76,12 +77,11 @@ fetch(url + "/" + id)
   function addCart() {
  
    info.classList.add('newInfoAdd')
-   
-    setTimeout(function() {
-      info.classList.remove('newInfoAdd');
-      
-      
-      }, 3000);
+
+   setTimeout(function() {
+     info.classList.remove('newInfoAdd');
+   }, 3000);
+
 
     let memory = JSON.parse(localStorage.getItem('article')); //converti les données JSON en objet JS
    

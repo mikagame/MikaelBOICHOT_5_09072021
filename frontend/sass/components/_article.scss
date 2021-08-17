@@ -51,6 +51,7 @@
 }
 
 #text {
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,8 +63,8 @@
 
 label {
     margin: 10px 0 10px 0;
-    
 }
+
 #quantity {
     width: 50px;
     
@@ -80,14 +81,12 @@ label {
         color: white;
         border-radius: 10px;
         text-align: center;
-    }
-   
+    }  
 }
-
 
 #addTeddy {
     z-index: 2;
-    width: 40%;
+    width: 30%;
     margin: 0 10px 0 0;
     padding: 10px 15px 10px 15px;
     color: white;
