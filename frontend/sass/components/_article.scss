@@ -58,9 +58,6 @@
     padding: 20px;
     border-radius: 15px;
     font-weight: bold;
-    p {
-        margin-bottom: 5px;
-    }
 }
 
 label {
@@ -72,12 +69,27 @@ label {
     
 }
 
+#btnZone {
+    display: flex;
+    justify-content: space-between;
+    a {
+        z-index: 2;
+        text-decoration: none;
+        background-color: rgb(70, 70, 131);
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+    }
+   
+}
+
+
 #addTeddy {
-    width: 30%;
-    margin: 0;
-    padding: 10px;
-    position: relative;
-    top: 50px;
+    z-index: 2;
+    width: 40%;
+    margin: 0 10px 0 0;
+    padding: 10px 15px 10px 15px;
     color: white;
     border-radius: 10px;
     text-align: center;

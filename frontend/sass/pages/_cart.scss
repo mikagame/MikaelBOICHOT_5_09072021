@@ -83,18 +83,11 @@
     opacity: 0;
     width: 30%;
     color: transparent;
-    padding: 20px;
-    height: 30px;
-    
-    position: relative;
-    bottom: 20px;
-    left: 200px;
-    border-radius: 15px;
-    
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin: 0;
 }
 @keyframes show {
     0% {
@@ -105,6 +98,7 @@
         opacity: 1;
         color : white;
         background-color: green;
+        
     }
     100% {
         opacity: 0;
@@ -182,9 +176,9 @@ input:valid {
 
 @media only screen and (max-width: 799px) {
 
-    .infoAdd {
+    /*.infoAdd {
         position: relative;
         bottom: 0;
         left: 50%;
-    }   
+    } */  
 }

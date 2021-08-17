@@ -15,11 +15,14 @@ fetch(url + "/" + id)
   // *** ourson et attributs ***
   const img = document.createElement("img");
   const text = document.createElement("div");
+  text.setAttribute('id', 'text');
   const nameTeddy = document.createElement("p");
   const priceTeddy = document.createElement("p");
   const descriptionTeddy = document.createElement("p");
+  const btnZone = document.createElement('div');
+  btnZone.setAttribute('id', 'btnZone');
   img.src = data.imageUrl;
-  text.setAttribute('id', 'text')
+  
   nameTeddy.innerHTML = data.name;
   priceTeddy.innerHTML = `${data.price / 100}` + ".00 €";
   descriptionTeddy.innerHTML = data.description;
@@ -56,12 +59,18 @@ fetch(url + "/" + id)
     only.appendChild(text).appendChild(labelColor).appendChild(color).appendChild(choice);
   });
   only.appendChild(text).appendChild(labelQuantity).appendChild(quantity);
-  only.appendChild(text).appendChild(addTeddy);
+  only.appendChild(text).appendChild(btnZone).appendChild(addTeddy);
 
   const info = document.createElement('p');
   info.innerHTML = "Article ajouté";
   info.classList.add('infoAdd');
-   only.appendChild(text).appendChild(info);
+  only.appendChild(text).appendChild(btnZone).appendChild(info);
+
+  const backHome = document.createElement('a');
+  backHome.innerHTML = "Accueil";
+  backHome.setAttribute('href', '../index.html')
+  only.appendChild(text).appendChild(btnZone).appendChild(backHome);
+
 
   // *** ajouter au panier ***
   function addCart() {

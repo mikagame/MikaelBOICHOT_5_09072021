@@ -267,15 +267,11 @@ h2 {
   opacity: 0;
   width: 30%;
   color: transparent;
-  padding: 20px;
-  height: 30px;
-  position: relative;
-  bottom: 20px;
-  left: 200px;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
 @keyframes show {
@@ -358,11 +354,11 @@ input:valid {
 }
 
 @media only screen and (max-width: 799px) {
-  .infoAdd {
-    position: relative;
-    bottom: 0;
-    left: 50%;
-  }
+  /*.infoAdd {
+      position: relative;
+      bottom: 0;
+      left: 50%;
+  } */
 }
 #terminate {
   text-align: center;
@@ -436,9 +432,6 @@ input:valid {
   border-radius: 15px;
   font-weight: bold;
 }
-#text p {
-  margin-bottom: 5px;
-}
 
 label {
   margin: 10px 0 10px 0;
@@ -448,12 +441,25 @@ label {
   width: 50px;
 }
 
-#addTeddy {
-  width: 30%;
-  margin: 0;
+#btnZone {
+  display: flex;
+  justify-content: space-between;
+}
+#btnZone a {
+  z-index: 2;
+  text-decoration: none;
+  background-color: #464683;
   padding: 10px;
-  position: relative;
-  top: 50px;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#addTeddy {
+  z-index: 2;
+  width: 40%;
+  margin: 0 10px 0 0;
+  padding: 10px 15px 10px 15px;
   color: white;
   border-radius: 10px;
   text-align: center;

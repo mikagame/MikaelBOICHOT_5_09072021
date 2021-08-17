@@ -65,16 +65,7 @@ memory.forEach(element => {
     memory.forEach(element => {
         memoryId.push(element.id)
     })
-
-
-    if(emailInput.validity.valid) {
-        document.getElementById('emailZone').classList.remove('badEmail');
-        document.getElementById('emailZone').classList.remove('noEmail');
-        document.getElementById('emailZone').classList.add('goodEmail');
-        
-    }
-    
-    
+ 
 // *** Passer commande ***
     function orderConfirm() {
 
