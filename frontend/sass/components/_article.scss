@@ -18,10 +18,10 @@
         box-shadow: 2px 2px 2px transparent;
         transition: all 0.3s;
         &:hover {
-            background-color:  rgb(190, 9, 1);
+            background-color:  rgb(157, 17, 185);
             transform: scale(1.05);
-           /*border: 1px solid rgb(78, 9, 1);
-           box-shadow: 2px 2px 2px rgb(78, 9, 1);*/    
+             
+           box-shadow: 2px 6px 8px rgb(43, 42, 42);  
         }
         p { 
             margin: 10px 0 10px 0;
@@ -84,9 +84,8 @@ label {
     cursor: pointer;
     background-color: rgb(70, 70, 131);
     &:hover {
-        background-color: rgb(179, 36, 11);
-    }
-    
+        background-color: rgb(47, 180, 34);
+    } 
 }
 
 @media only screen and (max-width: 599px) {

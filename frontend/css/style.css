@@ -47,7 +47,7 @@ nav a {
   font-weight: 600;
 }
 nav a:hover {
-  background-color: #b3240b;
+  background-color: #9d11b9;
 }
 nav i {
   margin-right: 10px;
@@ -270,7 +270,7 @@ h2 {
   padding: 20px;
   height: 30px;
   position: relative;
-  bottom: 150px;
+  bottom: 20px;
   left: 200px;
   border-radius: 15px;
   display: flex;
@@ -336,25 +336,25 @@ h2 {
   margin: 30px;
 }
 #clearCart p {
-  background: red;
+  background: #a31515;
   color: white;
   padding: 10px;
   border-radius: 15px;
   display: inline;
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 #clearCart p:hover {
   box-shadow: 2px 2px 8px #4e0901;
 }
 
-input:invalid {
+.badEmail {
   background-color: red;
-  opacity: 0.8;
 }
 
 input:valid {
   border: 1px solid green;
+  background-color: white;
 }
 
 @media only screen and (max-width: 799px) {
@@ -401,10 +401,9 @@ input:valid {
   transition: all 0.3s;
 }
 #teddies a:hover {
-  background-color: #be0901;
+  background-color: #9d11b9;
   transform: scale(1.05);
-  /*border: 1px solid rgb(78, 9, 1);
-  box-shadow: 2px 2px 2px rgb(78, 9, 1);*/
+  box-shadow: 2px 6px 8px #2b2a2a;
 }
 #teddies a p {
   margin: 10px 0 10px 0;
@@ -462,7 +461,7 @@ label {
   background-color: #464683;
 }
 #addTeddy:hover {
-  background-color: #b3240b;
+  background-color: #2fb422;
 }
 
 @media only screen and (max-width: 599px) {

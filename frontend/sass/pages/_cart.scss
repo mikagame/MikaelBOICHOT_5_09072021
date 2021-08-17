@@ -87,7 +87,7 @@
     height: 30px;
     
     position: relative;
-    bottom: 150px;
+    bottom: 20px;
     left: 200px;
     border-radius: 15px;
     
@@ -114,8 +114,6 @@
 .newInfoAdd {
     animation: show 4s ease-in-out;
 }
-
-
 
 #contactInput {
     display: flex;
@@ -160,29 +158,27 @@
 #clearCart {
     margin: 30px;   
     p {
-        background: red;
+        background: rgb(163, 21, 21);
         color: white;
         padding: 10px;
         border-radius: 15px;
         display: inline;
         cursor: pointer;
-        border: 1px solid black;
+        border: 1px solid white;
         &:hover {    
             box-shadow: 2px 2px 8px rgb(78, 9, 1);   
-        }
-        
+        }        
     }
 }
 
-input:invalid {
-    background-color: red;
-    opacity: 0.8;
+ .badEmail {
+        background-color: red;
 }
 
 input:valid {
     border: 1px solid green;
+    background-color: white;  
 }
-
 
 @media only screen and (max-width: 799px) {
 
@@ -190,7 +186,5 @@ input:valid {
         position: relative;
         bottom: 0;
         left: 50%;
-    }
-
-    
+    }   
 }

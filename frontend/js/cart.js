@@ -65,6 +65,15 @@ memory.forEach(element => {
     memory.forEach(element => {
         memoryId.push(element.id)
     })
+
+
+    if(emailInput.validity.valid) {
+        document.getElementById('emailZone').classList.remove('badEmail');
+        document.getElementById('emailZone').classList.remove('noEmail');
+        document.getElementById('emailZone').classList.add('goodEmail');
+        
+    }
+    
     
 // *** Passer commande ***
     function orderConfirm() {
@@ -81,6 +90,11 @@ memory.forEach(element => {
             //erreur
             alert("Vous devez renseigner tous les champs  pour valider votre commande");
         } 
+
+        if(!emailInput.validity.valid) {
+            document.getElementById('email').classList.add('badEmail');
+            emailInput.value = "";
+        }
         
         
         if(
@@ -123,7 +137,7 @@ memory.forEach(element => {
         } else {
             
                 //erreur
-                alert("Vous devez renseigner tous les champs  pour valider votre commande");
+                alert("Vous devez renseigner des données valides");
             
         }
     }
