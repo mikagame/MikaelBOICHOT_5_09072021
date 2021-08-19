@@ -1,3 +1,6 @@
+/*import {up} from './index';
+window.onscroll = function() {up()};*/
+
 /*const url = "http://localhost:3000/api/teddies";    // *** URL API projet OC *** */
 const url = "https://projet5oc.herokuapp.com/api/teddies"; // *** URL API sur heroku ***
 
@@ -57,7 +60,7 @@ fetch(url + "/" + id)
             document.getElementById('info').classList.add('new');
             setTimeout(function () {
                 info.classList.remove('new');
-            }, 2000);
+            }, 2500);
 
             // *** si localStorage contient un objet => ajout du nouvel objet au tableau ***
             

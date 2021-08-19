@@ -383,6 +383,7 @@ input:valid {
   margin: 50px auto;
   padding: 0 50px 100px 50px;
   max-width: 1200px;
+  animation: fadein 1.5s ease-in-out;
 }
 #teddies a {
   display: flex;
@@ -421,6 +422,7 @@ input:valid {
   padding-bottom: 150px;
   margin-bottom: 50px;
   max-width: 1200px;
+  animation: fadein 1.5s ease-in-out;
 }
 
 #text {
@@ -454,6 +456,12 @@ label {
   color: white;
   border-radius: 10px;
   text-align: center;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+#btnZone a:hover {
+  background-color: #9d11b9;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
 }
 
 #addTeddy {
@@ -466,9 +474,12 @@ label {
   text-align: center;
   cursor: pointer;
   background-color: #464683;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
 }
 #addTeddy:hover {
   background-color: #2fb422;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
 }
 
 @media only screen and (max-width: 599px) {
@@ -511,7 +522,7 @@ label {
   }
 }
 .new {
-  animation: bg 3s ease-in-out;
+  animation: bg 2.5s ease-in-out;
 }
 
 #info {
@@ -522,6 +533,7 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
   opacity: 0;
 }
 #info p {
@@ -529,13 +541,42 @@ label {
   display: flex;
   z-index: 0;
   color: white;
-  opacity: 0.8;
+  opacity: 1;
   border: 3px solid #464683;
   border-radius: 15px;
   padding: 100px;
   background-color: green;
 }
 
+#up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  opacity: 0;
+}
+#up a {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #b1acac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/*** colors ***/
+@keyframes fadein {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes bg {
   0% {
     opacity: 0;
@@ -545,12 +586,15 @@ label {
     opacity: 1;
     z-index: 9998;
   }
+  60% {
+    opacity: 1;
+    z-index: 9998;
+  }
   100% {
     opacity: 0;
     z-index: 9998;
   }
 }
-/*** colors ***/
 #teddies img {
   object-fit: cover;
   width: 100%;
