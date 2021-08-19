@@ -1,10 +1,9 @@
 /*const url = "http://localhost:3000/api/teddies";    // *** URL API projet OC *** */
 const url = "https://projet5oc.herokuapp.com/api/teddies"; // *** URL API sur heroku ***
 
-// Récuperation données et création articles
-fetch(url)
-.then(response => response.json())
-.then(data => {
+// ***Fonction création articles *** 
+
+function allProducts(data) {
     data.forEach(e => {  
         const article = document.createElement('a');
         article.setAttribute("href", `./frontend/product.html?id=${e._id}`);
@@ -15,6 +14,14 @@ fetch(url)
                 <p>${e.price / 100}.00 €</p>
             </div>`
     }) 
+}
+
+// *** Récupération données dans API et appel fonction création articles ***
+
+fetch(url)
+.then(response => response.json())
+.then(data => {
+   allProducts(data);
 })
 .catch(function(error) {
     const err = document.createElement('p');

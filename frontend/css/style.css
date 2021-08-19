@@ -354,11 +354,9 @@ input:valid {
 }
 
 @media only screen and (max-width: 799px) {
-  /*.infoAdd {
-      position: relative;
-      bottom: 0;
-      left: 50%;
-  } */
+  #cart {
+    padding-bottom: 150px;
+  }
 }
 #terminate {
   text-align: center;
@@ -503,6 +501,46 @@ label {
   }
   #only select, #only input {
     padding: 10px;
+  }
+}
+.new {
+  animation: bg 3s ease-in-out;
+}
+
+#info {
+  position: fixed;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+#info p {
+  font-size: 18px;
+  display: flex;
+  z-index: 0;
+  color: white;
+  opacity: 0.8;
+  border: 3px solid #464683;
+  border-radius: 15px;
+  padding: 100px;
+  background-color: green;
+}
+
+@keyframes bg {
+  0% {
+    opacity: 0;
+    z-index: 9998;
+  }
+  20% {
+    opacity: 1;
+    z-index: 9998;
+  }
+  100% {
+    opacity: 0;
+    z-index: 9998;
   }
 }
 /*** colors ***/

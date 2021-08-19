@@ -1,0 +1,45 @@
+.new {
+    animation: bg 3s ease-in-out;
+}
+
+
+#info {
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //background-color: white;
+    
+    opacity: 0;
+    p {
+        font-size: 18px;
+        display: flex;
+        z-index: 0;
+        color: white;
+        opacity: 0.8;
+        border: 3px solid rgb(70, 70, 131);
+        border-radius: 15px;
+        padding: 100px;
+        background-color: green;
+    }
+}
+
+
+
+@keyframes bg {
+    0% {
+        opacity: 0;
+        z-index: 9998;
+    }
+    20% {
+        opacity: 1;
+        z-index: 9998;
+    }
+    100% {
+        opacity: 0;
+        z-index: 9998;
+    }
+}
