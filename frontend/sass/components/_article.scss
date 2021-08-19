@@ -59,7 +59,7 @@
     padding: 20px;
     border-radius: 15px;
     font-weight: bold;
-    width: 50%;
+    max-width: 600px;
 }
 
 label {
@@ -120,7 +120,6 @@ label {
     }
     #text {
         margin-top: 20px;
-        width: 100%;
     }
 }
 
@@ -142,7 +141,6 @@ label {
 
     #text {
         margin-top: 20px;
-        width: 100%;
     }
 
 }
