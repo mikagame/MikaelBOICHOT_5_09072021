@@ -59,6 +59,7 @@
     padding: 20px;
     border-radius: 15px;
     font-weight: bold;
+    width: 50%;
 }
 
 label {
@@ -106,6 +107,8 @@ label {
         flex-direction: column;
         padding-bottom: 280px;
     }
+
+    
     #only {
         display: flex;
         flex-direction: column;
@@ -116,6 +119,7 @@ label {
     }
     #text {
         margin-top: 20px;
+        width: 100%;
     }
 }
 
@@ -133,6 +137,11 @@ label {
         select, input {
             padding: 10px;
         }
+    }
+
+    #text {
+        margin-top: 20px;
+        width: 100%;
     }
 
 }

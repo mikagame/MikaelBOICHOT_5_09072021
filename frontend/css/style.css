@@ -429,6 +429,7 @@ input:valid {
   padding: 20px;
   border-radius: 15px;
   font-weight: bold;
+  width: 50%;
 }
 
 label {
@@ -486,6 +487,7 @@ label {
 
   #text {
     margin-top: 20px;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 799px) {
@@ -501,6 +503,11 @@ label {
   }
   #only select, #only input {
     padding: 10px;
+  }
+
+  #text {
+    margin-top: 20px;
+    width: 100%;
   }
 }
 .new {
@@ -554,7 +561,7 @@ label {
 
 #only img {
   object-fit: cover;
-  width: 100%;
+  width: 50%;
   height: 30%;
   max-height: 700px;
   border-radius: 15px;
@@ -564,11 +571,13 @@ label {
 @media only screen and (max-width: 399px) {
   #teddies img, #only img {
     height: 200px;
+    width: 100%;
   }
 }
 @media only screen and (min-width: 400px) and (max-width: 767px) {
   #only img {
     height: 30%;
+    width: 100%;
   }
 }
 
