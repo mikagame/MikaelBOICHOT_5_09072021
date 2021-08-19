@@ -419,6 +419,7 @@ input:valid {
   box-shadow: 2px 2px 2px transparent;
   padding-bottom: 150px;
   margin-bottom: 50px;
+  max-width: 1200px;
 }
 
 #text {
@@ -479,7 +480,6 @@ label {
   #only {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
     padding-bottom: 280px;
   }
   #only select, #only input {
