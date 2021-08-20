@@ -74,6 +74,10 @@
     background-color: rgb(243, 234, 241);
 }
 
+form {
+    display: flex;
+}
+
 #infoCart {
     text-align: center;
     font-size: 25px;
@@ -172,7 +176,7 @@
 
 input:valid {
     border: 1px solid green;
-    background-color: white;  
+    background-color: rgb(150, 235, 164);  
 }
 
 @media only screen and (max-width: 799px) {

@@ -258,6 +258,10 @@ h2 {
   background-color: #f3eaf1;
 }
 
+form {
+  display: flex;
+}
+
 #infoCart {
   text-align: center;
   font-size: 25px;
@@ -350,7 +354,7 @@ h2 {
 
 input:valid {
   border: 1px solid green;
-  background-color: white;
+  background-color: #96eba4;
 }
 
 @media only screen and (max-width: 799px) {
@@ -359,20 +363,23 @@ input:valid {
   }
 }
 #terminate {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
   text-align: center;
-  margin: 120px 20px 50px 20px;
+  margin: 50px auto;
+  margin-bottom: 200px;
   border: 1px solid #5a0901;
   border-radius: 15px;
   padding: 20px 0 20px 0;
 }
-
-#confirm, #result {
-  margin-bottom: 20px;
+#terminate h1, #terminate h2, #terminate p {
+  margin: 5px;
 }
 
 @media only screen and (max-width: 767px) {
   #terminate {
-    margin: 40px 15px 350px 15px;
+    margin-bottom: 280px;
     font-size: 15px;
   }
 }
