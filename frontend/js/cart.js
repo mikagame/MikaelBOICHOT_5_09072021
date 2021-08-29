@@ -39,7 +39,6 @@ memory.forEach(element => {
     let cityInput = document.getElementById('city');
     let emailInput = document.getElementById('email');
 
-
     // *** vider le panier ***
     function clearCart() {
         memory = [];
@@ -54,7 +53,6 @@ memory.forEach(element => {
 
     document.getElementById('clearCart').addEventListener('click', clearCart)
 
-
     // *** tableau des id pour requête POST ***
     let memoryId = [];
     memory.forEach(element => {
@@ -63,8 +61,6 @@ memory.forEach(element => {
  
 // *** Passer commande ***
     function orderConfirm() {
-
-        
         // *** Vérification que les champs soient renseignés ***
         if (
             !firstNameInput.value ||
@@ -75,30 +71,29 @@ memory.forEach(element => {
         ) {
             //erreur
             alert("Vous devez renseigner tous les champs  pour valider votre commande");
+            preventDefault();
         } 
 
         if(!emailInput.validity.valid) {
-            document.getElementById('email').classList.add('badEmail');
+            document.getElementById('email').classList.add('bad');
             emailInput.value = "";
         }
         if(!firstNameInput.validity.valid) {
-            document.getElementById('firstName').classList.add('badEmail');
+            document.getElementById('firstName').classList.add('bad');
             firstNameInput.value = "";
         }
         if(!addressInput.validity.valid) {
-            document.getElementById('address').classList.add('badEmail');
+            document.getElementById('address').classList.add('bad');
             addressInput.value = "";
         }
         if(!cityInput.validity.valid) {
-            document.getElementById('city').classList.add('badEmail');
+            document.getElementById('city').classList.add('bad');
             cityInput.value = "";
         }
         if(!lastNameInput.validity.valid) {
-            document.getElementById('lastName').classList.add('badEmail');
+            document.getElementById('lastName').classList.add('bad');
             lastNameInput.value = "";
         }
-        
-        
         if(
             firstNameInput.validity.valid &&
             lastNameInput.validity.valid &&

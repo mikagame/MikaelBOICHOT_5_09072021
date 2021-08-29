@@ -363,7 +363,7 @@ form input:valid {
   box-shadow: 2px 2px 8px #4e0901;
 }
 
-.badEmail {
+.bad {
   background-color: red;
 }
 

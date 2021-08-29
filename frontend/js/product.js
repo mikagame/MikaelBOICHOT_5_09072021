@@ -25,7 +25,7 @@ function oneProduct(data) {
                 <a href="../index.html">Accueil</a>
             </div>
         </div>`
-
+        /* ***Boucle pour la couleur ***/
     data.colors.forEach(element => {
         const choiceColor = document.createElement('option');
         choiceColor.innerHTML = element;
@@ -90,7 +90,6 @@ fetch(url + "/" + id)
                 localStorage.setItem("article", JSON.stringify(memory));
             }
         };
-        // addTeddy.addEventListener('click', addCart); 
         document.getElementById('addTeddy').addEventListener('click', addCart);
 
     })

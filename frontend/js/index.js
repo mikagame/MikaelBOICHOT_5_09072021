@@ -37,7 +37,6 @@ function up() {
         document.getElementById('up').style.opacity = 0;
     } 
 }
-
 window.onscroll = function() {up()};
 
 
