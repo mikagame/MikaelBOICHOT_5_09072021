@@ -63,8 +63,6 @@
     text-align: center;
 }
 
-
-
 #first {
     margin-bottom: 50px;
     background-color: rgb(243, 234, 241);
@@ -76,6 +74,11 @@
 
 form {
     display: flex;
+    input:valid {
+        border: 1px solid green;
+        background-color: rgb(150, 235, 164);  
+    }
+    
 }
 
 #infoCart {
@@ -174,10 +177,7 @@ form {
         background-color: red;
 }
 
-input:valid {
-    border: 1px solid green;
-    background-color: rgb(150, 235, 164);  
-}
+
 
 @media only screen and (max-width: 799px) {
 
