@@ -71,7 +71,7 @@ memory.forEach(element => {
         ) {
             //erreur
             alert("Vous devez renseigner tous les champs  pour valider votre commande");
-            preventDefault();
+            
         } 
 
         if(!emailInput.validity.valid) {
