@@ -439,7 +439,7 @@ form input:valid {
   padding-bottom: 150px;
   margin-bottom: 50px;
   max-width: 1200px;
-  animation: fadein 1.5s ease-in-out;
+  animation: fadeinOne 1.5s ease-in-out;
 }
 
 #text {
@@ -591,6 +591,14 @@ label {
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeinOne {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }

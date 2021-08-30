@@ -45,12 +45,12 @@
                 <form id="contactInput">
                     <div class="firstName">
                         <label for="firstName"></label>
-                        <input id="firstName" type="text" pattern="[a-zA-Z][a-zA-Z,.'-]{2,30}" placeholder="Prénom" required>
+                        <input id="firstName" type="text" pattern="[^0-9]{2,30}" placeholder="Prénom" required>
                         
                     </div>
                     <div class="lastName">
                         <label for="lastName"></label>
-                        <input id="lastName" type="text" pattern="[a-zA-Z][a-zA-Z,.'-]{2,30}" placeholder="Nom" required>
+                        <input id="lastName" type="text" pattern="[^0-9]{2,30}" placeholder="Nom" required>
                         
                     </div>
                     <div class="address">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="city">
                         <label for="city"></label>
-                        <input id="city" type="text" pattern="[a-zA-Z][a-zA-Z,.'-]{2,30}" placeholder="Ville" required>
+                        <input id="city" type="text" pattern="[^0-9]{2,30}" placeholder="Ville" required>
                         
                     </div>
                     <div id="emailZone" class="noEmail">
