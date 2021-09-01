@@ -1,5 +1,5 @@
-/*const url = "http://localhost:3000/api/teddies";    // *** URL API projet OC *** */
-const url = "https://projet5oc.herokuapp.com/api/teddies"; // *** URL API sur heroku ***
+const url = "http://localhost:3000/api/teddies";    // *** URL API projet OC *** */
+/*const url = "https://projet5oc.herokuapp.com/api/teddies";*/ // *** URL API sur heroku ***
 
 // ***Fonction création articles *** 
 
